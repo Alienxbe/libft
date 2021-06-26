@@ -1,2 +1,2 @@
 # libft
-Installation : ```git clone https://github.com/Alienxbe/libft.git && echo "pft/" >> .gitignore```
+Installation : ```git clone https://github.com/Alienxbe/libft.git && echo "libft/" >> .gitignore```
