@@ -1,2 +1,4 @@
 a.out
 libft.a
+main.c
+srcs/*.o

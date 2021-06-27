@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:46:33 by mykman            #+#    #+#             */
-/*   Updated: 2021/03/22 18:47:10 by mykman           ###   ########.fr       */
+/*   Updated: 2021/06/27 19:54:04 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,15 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 int				ft_lstsize(t_list *lst);
+
+/*
+** ---- Customs ----
+*/
+
+int				ft_intsize(int n, int c);
+int				ft_index(const char *s, char c);
+int				ft_pow(int n, int pow);
+
+void			ft_padding(char c, int n);
 
 #endif

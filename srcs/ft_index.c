@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 13:26:55 by mykman            #+#    #+#             */
-/*   Updated: 2021/06/27 19:53:33 by mykman           ###   ########.fr       */
+/*   Created: 2021/06/27 19:56:40 by mykman            #+#    #+#             */
+/*   Updated: 2021/06/27 19:57:09 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_itoa(int n)
+int	ft_index(const char *s, char c)
 {
-	char			*str;
-	unsigned int	un;
-	int				size;
+	int	i;
 
-	un = n;
-	size = ft_intsize(n, 0) + 1;
-	if (!n)
-		size++;
-	str = (char *)ft_calloc(sizeof(char), size);
-	if (!str)
-		return (NULL);
-	str = ft_memset(str, '0', size - 1);
-	if (n < 0)
-		un = -n;
-	while (--size)
+	if (s)
 	{
-		str[size - 1] = '0' + un % 10;
-		if (n < 0 && !(size - 1))
-			str[size - 1] = '-';
-		un /= 10;
+		i = -1;
+		while (s[++i])
+			if (s[i] == c)
+				return (i);
+		if (s[i] == c)
+			return (i);
 	}
-	return (str);
+	return (-1);
 }
