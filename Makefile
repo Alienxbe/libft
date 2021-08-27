@@ -6,19 +6,19 @@
 #    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 19:55:36 by mykman            #+#    #+#              #
-#    Updated: 2021/08/20 20:04:30 by mykman           ###   ########.fr        #
+#    Updated: 2021/08/27 16:26:28 by mykman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME				=	libft.a
-NAME_GENERAL		=	general_functions.a
-NAME_GNL			=	gnl.a
+NAME				:=	libft.a
+NAME_GENERAL		:=	general_functions.a
+NAME_GNL			:=	gnl.a
 
-FOLDER_GENERAL		=	general_functions
-FOLDER_GNL			=	GNL
+FOLDER_GENERAL		:=	general_functions
+FOLDER_GNL			:=	GNL
 
-MAKE_GENERAL		=	@make -C general_functions
-MAKE_GNL			=	@make -C GNL
+MAKE_GENERAL		:=	@make -C ${FOLDER_GENERAL}
+MAKE_GNL			:=	@make -C ${FOLDER_GNL}
 
 
 all:				general_functions gnl
