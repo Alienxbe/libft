@@ -3,16 +3,18 @@
 #                                                         :::      ::::::::    #
 #    bash_colors.sh                                     :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
+#    By: mykman <mykman@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/27 17:51:39 by mykman            #+#    #+#              #
-#    Updated: 2021/08/27 18:00:26 by mykman           ###   ########.fr        #
+#    Updated: 2021/08/29 01:59:31 by anonymous        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+_ECHO=$		@echo -e
+
 # COLORS DEFINITIONS
-_RED=$		'\033[38;5;9m'
-_GREEN=$	'\033[38;5;10m'
-_BLUE=$ 	'\033[38;5;14m'
-_YELLOW=$	'\033[38;5;11m'
-_WHITE=$	'\033[38;5;15m'
+_RED=$		'\e[38;5;9m'
+_GREEN=$	'\e[38;5;10m'
+_BLUE=$ 	'\e[38;5;14m'
+_YELLOW=$	'\e[38;5;11m'
+_RESET=$	'\e[38;5;7m'
