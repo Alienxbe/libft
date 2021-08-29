@@ -6,7 +6,7 @@
 #    By: mykman <mykman@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 19:55:36 by mykman            #+#    #+#              #
-#    Updated: 2021/08/29 02:19:41 by anonymous        ###   ########.fr        #
+#    Updated: 2021/08/29 10:19:27 by anonymous        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,14 +86,13 @@ OBJS		+=	$(addprefix srcs/ft_string/, ${SRCS_STRING:.c=.o})
 
 $(NAME):	${OBJS}
 	@ar -rcs $@ $^
-	@echo "${GREEN}Library created !${_RESET}"
+	@echo "${GREEN}Library created !${RESET}"
 
 all:		${NAME}
-	source ../bash_colors.sh
 
 clean:
 	@rm -f ${OBJS}
-	@echo "Cleaning ojects."
+	@echo "${BLUE}Cleaning ojects.${RESET}"
 
 fclean:
 	@rm -f ${OBJS} ${NAME}

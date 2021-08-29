@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_padding.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 20:00:02 by mykman            #+#    #+#             */
-/*   Updated: 2021/06/27 20:00:17 by mykman           ###   ########.fr       */
+/*   Updated: 2021/08/29 10:20:10 by anonymous        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_padding(char c, int n)
+void	ft_padding(const char c, int n)
 {
 	while (n-- > 0)
 		ft_putchar_fd(c, 1);
