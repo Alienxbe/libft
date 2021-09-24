@@ -6,7 +6,7 @@
 #    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 19:55:36 by mykman            #+#    #+#              #
-#    Updated: 2021/08/27 16:26:28 by mykman           ###   ########.fr        #
+#    Updated: 2021/09/24 18:14:55 by mykman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all:				general_functions gnl
 
 general_functions:
 	${MAKE_GENERAL}
-	mv ${FOLDER_GENERAL}/${NAME_GENERAL} ./${NAME}
+	@mv ${FOLDER_GENERAL}/${NAME_GENERAL} ./${NAME}
 
 gnl:				general_functions
 	${MAKE_GNL}

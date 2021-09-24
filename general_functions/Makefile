@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mykman <mykman@student.42.fr>              +#+  +:+       +#+         #
+#    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 19:55:36 by mykman            #+#    #+#              #
-#    Updated: 2021/08/29 10:19:27 by anonymous        ###   ########.fr        #
+#    Updated: 2021/09/24 18:12:02 by mykman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,14 @@
 CC			=	@gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
-RED			:=	\e[38;5;9m
-GREEN		:=	\e[38;5;10m
-BLUE		:= 	\e[38;5;14m
-YELLOW		:=	\e[38;5;226m
-RESET		:=	\e[38;5;7m
+RED			:=	\033[38;5;9m
+GREEN		:=	\033[38;5;10m
+BLUE		:= 	\033[38;5;14m
+YELLOW		:=	\033[38;5;226m
+RESET		:=	\033[38;5;7m
 
 # FILES
-FT			:=	libft
+FT			:=	general_functions
 NAME		:=	${FT}.a
 
 SRCS_CTYPE	:=	ft_isalnum.c \
