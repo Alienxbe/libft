@@ -12,24 +12,24 @@
 
 NAME				:=	libft.a
 NAME_GENERAL		:=	general_functions.a
-NAME_GNL			:=	gnl.a
+NAME_GNL			:=	get_next_line.a
 
-FOLDER_GENERAL		:=	general_functions
-FOLDER_GNL			:=	GNL
+FOLDER_GENERAL		:=	general_functions/
+FOLDER_GNL			:=	get_next_line/
 
-MAKE_GENERAL		:=	@make -C ${FOLDER_GENERAL}
-MAKE_GNL			:=	@make -C ${FOLDER_GNL}
+MAKE_GENERAL		:=	@make --no-print-directory -C ${FOLDER_GENERAL}
+MAKE_GNL			:=	@make --no-print-directory -C ${FOLDER_GNL}
 
 
-all:				general_functions gnl
+all:				general_functions
 
 general_functions:
 	${MAKE_GENERAL}
 	@mv ${FOLDER_GENERAL}/${NAME_GENERAL} ./${NAME}
 
-gnl:				general_functions
+get_next_line:
 	${MAKE_GNL}
-	@ar -rcs ${NAME} ${FOLDER_GNL}/${NAME_GNL}
+	@mv ${FOLDER_GNL}/${NAME_GNL} ./${NAME}
 
 clean:
 	${MAKE_GENERAL} clean
@@ -42,4 +42,4 @@ fclean:
 
 re:					fclean clean all
 
-.PHONY:				all general_functions gnl clean fclean re
+.PHONY:				all general_functions get_next_line clean fclean re

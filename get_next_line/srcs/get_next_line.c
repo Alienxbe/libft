@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 int	free_return(char **str, int ret_value)
 {
@@ -18,26 +18,6 @@ int	free_return(char **str, int ret_value)
 		free(*str);
 	*str = NULL;
 	return (ret_value);
-}
-
-char	*ft_substr(char *s, int start, int len, int s_free)
-{
-	char	*p;
-
-	if (len < 0)
-		len = ft_strlen(s);
-	p = (char *)malloc(sizeof(*p) * (len + 1));
-	if (p)
-	{
-		p[len] = 0;
-		ft_memcpy(p, s + start, len);
-	}
-	if (s_free || !p)
-	{
-		free(s);
-		return (NULL);
-	}
-	return (p);
 }
 
 char	*gnl_strjoin(char *s1, char *s2)
@@ -59,13 +39,13 @@ char	*gnl_strjoin(char *s1, char *s2)
 
 int	get_next_line(int fd, char **line)
 {
-	static char	*saved[OPEN_MAX];
+	static char	*saved[FOPEN_MAX];
 	char		*buff;
 	int			bytes;
 
 	buff = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (read(fd, NULL, 0) < 0 || !line || !buff)
-		return (free_return(&buff, -1));
+		return (free_return(&buff, FILE_NOT_FOUND_ERROR));
 	bytes = 1;
 	while (ft_index(saved[fd], '\n') < 0 && bytes != 0)
 	{
@@ -76,12 +56,12 @@ int	get_next_line(int fd, char **line)
 			return (free_return(&buff, -1));
 	}
 	free(buff);
-	*line = ft_substr(saved[fd], 0, ft_index(saved[fd], '\n'), 0);
-	saved[fd] = ft_substr(saved[fd], ft_index(saved[fd], '\n') + 1,
-			ft_strlen(saved[fd]) - ft_index(saved[fd], '\n'), 1);
+	*line = ft_substr(saved[fd], 0, ft_index(saved[fd], '\n'));
+	saved[fd] = ft_strdiv(saved[fd], ft_index(saved[fd], '\n') + 1,
+					ft_strlen(saved[fd]) - ft_index(saved[fd], '\n'));
 	if (!*line || !saved[fd])
 		return (free_return(line, -1));
 	if (!bytes)
-		return (free_return(&saved, 0));
+		return (free_return(&saved[fd], 0));
 	return (1);
 }

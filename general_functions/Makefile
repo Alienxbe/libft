@@ -23,6 +23,7 @@ RESET		:=	\033[38;5;7m
 # FILES
 FT			:=	general_functions
 NAME		:=	${FT}.a
+PREFIX		:=	[${YELLOW}${FT}${RESET}]\t\t
 
 SRCS_CTYPE	:=	ft_isalnum.c \
 				ft_isalpha.c \
@@ -58,6 +59,7 @@ SRCS_STRING	:=	ft_atoi.c \
 				ft_itoa.c \
 				ft_split.c \
 				ft_strchr.c \
+				ft_strdiv.c \
 				ft_strdup.c \
 				ft_strjoin.c \
 				ft_strlcat.c \
@@ -81,22 +83,22 @@ OBJS		+=	$(addprefix srcs/ft_string/, ${SRCS_STRING:.c=.o})
 
 # RULES
 %.o:		%.c
-	${CC} ${CFLAGS} -c -I./includes $< -o ${<:.c=.o}
-	@echo "[${YELLOW}${FT}${RESET}]\t\tCompilation of ${subst srcs/,,$<}..."
+	${CC} ${CFLAGS} -c -I../includes $< -o ${<:.c=.o}
+	@echo "${PREFIX}Compilation of ${subst srcs/,,$<}..."
 
 $(NAME):	${OBJS}
 	@ar -rcs $@ $^
-	@echo "${GREEN}Library created !${RESET}"
+	@echo "${PREFIX}${GREEN}Library created !${RESET}"
 
 all:		${NAME}
 
 clean:
 	@rm -f ${OBJS}
-	@echo "${BLUE}Cleaning ojects.${RESET}"
+	@echo "${PREFIX}${BLUE}Cleaning ojects.${RESET}"
 
 fclean:
 	@rm -f ${OBJS} ${NAME}
-	@echo "${RED}Full clean.${RESET}"
+	@echo "${PREFIX}${RED}Full clean.${RESET}"
 
 re:			fclean all
 

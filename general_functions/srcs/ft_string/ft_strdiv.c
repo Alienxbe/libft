@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdiv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 20:02:03 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/24 17:59:49 by mykman           ###   ########.fr       */
+/*   Created: 2021/09/26 18:55:48 by mykman            #+#    #+#             */
+/*   Updated: 2021/09/26 18:56:02 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main(void)
+char	*ft_strdiv(char *s, int start, int len)
 {
-	printf("%c\n", ft_toupper('c'));
-	printf("%d\n", ft_atoi("125"));
-	return (0);
+	char	*p;
+	
+	p = ft_substr(s, start, len);
+	if (!p)
+		return (s);
+	else if (s)
+		free(s);
+	return(p);
 }

@@ -15,16 +15,20 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
-# include "general_functions/includes/ft_ctype.h"
-# include "general_functions/includes/ft_list.h"
-# include "general_functions/includes/ft_math.h"
-# include "general_functions/includes/ft_memory.h"
-# include "general_functions/includes/ft_stdio.h"
-# include "general_functions/includes/ft_string.h"
+# include "general_functions/ft_ctype.h"
+# include "general_functions/ft_list.h"
+# include "general_functions/ft_math.h"
+# include "general_functions/ft_memory.h"
+# include "general_functions/ft_stdio.h"
+# include "general_functions/ft_string.h"
 
-// # include "GNL/includes/get_next_line.h"
+# include "get_next_line/get_next_line.h"
 
 #endif
