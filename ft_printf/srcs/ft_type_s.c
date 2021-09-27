@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_type_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 13:26:55 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 17:21:09 by mykman           ###   ########.fr       */
+/*   Created: 2021/05/08 00:32:07 by mykman            #+#    #+#             */
+/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n, int minsize, char pos_char)
+int	ft_type_s(t_tag *tag, va_list args)
 {
-	unsigned int	un;
+	char	*s;
 
-	un = -n;
-	if (n < 0)
-		return (ft_utoa_base(un, minsize, BASE_DECI, '-')); 
-	return (ft_utoa_base(n, minsize, BASE_DECI, pos_char));
+	s = (char *)va_arg(args, char *);
+	if (!s)
+		s = NULL_STR;
+	if (!(tag->flags & FLAG_PRECISION) || tag->prec < 0
+		|| tag->prec > (int)ft_strlen(s))
+		s = ft_strdup(s);
+	else
+		s = ft_substr(s, 0, tag->prec);
+	if (!s)
+		return (MALLOC_ERROR);
+	return (ft_print_type(tag, s));
 }

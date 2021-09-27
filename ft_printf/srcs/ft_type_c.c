@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_type_c.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 13:26:55 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 17:21:09 by mykman           ###   ########.fr       */
+/*   Created: 2021/04/08 17:50:16 by mykman            #+#    #+#             */
+/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n, int minsize, char pos_char)
+int	ft_type_c(t_tag *tag, va_list args)
 {
-	unsigned int	un;
-
-	un = -n;
-	if (n < 0)
-		return (ft_utoa_base(un, minsize, BASE_DECI, '-')); 
-	return (ft_utoa_base(n, minsize, BASE_DECI, pos_char));
+	return (ft_print_type(tag, ft_ctoa((char)va_arg(args, int))));
 }

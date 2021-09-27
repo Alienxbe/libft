@@ -16,6 +16,7 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+# include <stdarg.h>
 # include <unistd.h>
 # include <limits.h>
 # include <fcntl.h>
@@ -30,5 +31,6 @@
 # include "general_functions/ft_string.h"
 
 # include "get_next_line/get_next_line.h"
+//# include "ft_printf/ft_printf.h"
 
 #endif

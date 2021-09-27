@@ -11,11 +11,13 @@
 # **************************************************************************** #
 
 NAME				:=	libft.a
-NAME_GENERAL		:=	general_functions.a
-NAME_GNL			:=	get_next_line.a
+NAME_GENERAL		:=	libftstd.a
+NAME_GNL			:=	libftgnl.a
+NAME_FT_PRINTF		:=	libftprintf.a
 
 FOLDER_GENERAL		:=	general_functions/
 FOLDER_GNL			:=	get_next_line/
+FOLDER_FT_PRINTF	:=	ft_printf/
 
 MAKE_GENERAL		:=	@make --no-print-directory -C ${FOLDER_GENERAL}
 MAKE_GNL			:=	@make --no-print-directory -C ${FOLDER_GNL}

@@ -47,13 +47,15 @@ SRCS_MEMORY	:=	ft_bzero.c \
 				ft_memcmp.c \
 				ft_memcpy.c \
 				ft_memmove.c \
-				ft_memset.c
+				ft_memset.c \
+				ft_ternary.c
 SRCS_STDIO	:=	ft_padding.c \
 				ft_putchar_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c
 SRCS_STRING	:=	ft_atoi.c \
+				ft_ctoa.c \
 				ft_index.c \
 				ft_intsize.c \
 				ft_itoa.c \
@@ -73,6 +75,8 @@ SRCS_STRING	:=	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
+				ft_usize_base.c \
+				ft_utoa_base.c
 
 OBJS		:=	$(addprefix srcs/ft_ctype/, ${SRCS_CTYPE:.c=.o})
 OBJS		+=	$(addprefix srcs/ft_list/, ${SRCS_LIST:.c=.o})
