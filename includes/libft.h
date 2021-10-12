@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:46:33 by mykman            #+#    #+#             */
-/*   Updated: 2021/08/29 01:41:28 by anonymous        ###   ########.fr       */
+/*   Updated: 2021/10/12 19:47:22 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 
 # include "general_functions/ft_ctype.h"
 # include "general_functions/ft_list.h"
+# include "general_functions/ft_dlist.h"
 # include "general_functions/ft_math.h"
 # include "general_functions/ft_memory.h"
 # include "general_functions/ft_stdio.h"

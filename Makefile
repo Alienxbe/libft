@@ -38,68 +38,74 @@ FOLDER_PRINTF	:=	srcs/ft_printf/
 # FILES
 
 SRCS_CTYPE		:=	ft_isalnum.c \
-				ft_isalpha.c \
-				ft_isascii.c \
-				ft_isdigit.c \
-				ft_isprint.c
+					ft_isalpha.c \
+					ft_isascii.c \
+					ft_isdigit.c \
+					ft_isprint.c
+SRCS_DLIST		:=	ft_dlstadd_back.c \
+					ft_dlstadd_front.c \
+					ft_dlstadd.c \
+					ft_dlstlast.c \
+					ft_dlstnew.c
 SRCS_LIST		:=	ft_lstadd_back.c \
-				ft_lstadd_front.c \
-				ft_lstclear.c \
-				ft_lstdelone.c \
-				ft_lstiter.c \
-				ft_lstlast.c \
-				ft_lstmap.c \
-				ft_lstnew.c \
-				ft_lstsize.c
+					ft_lstadd_front.c \
+					ft_lstclear.c \
+					ft_lstdelone.c \
+					ft_lstiter.c \
+					ft_lstlast.c \
+					ft_lstmap.c \
+					ft_lstnew.c \
+					ft_lstsize.c
 SRCS_MATH		:=	ft_pow.c
 SRCS_MEMORY		:=	ft_bzero.c \
-				ft_calloc.c \
-				ft_memccpy.c \
-				ft_memchr.c \
-				ft_memcmp.c \
-				ft_memcpy.c \
-				ft_memmove.c \
-				ft_memset.c \
-				ft_ternary.c
+					ft_calloc.c \
+					ft_memccpy.c \
+					ft_memchr.c \
+					ft_memcmp.c \
+					ft_memcpy.c \
+					ft_memmove.c \
+					ft_memset.c \
+					ft_ternary.c
 SRCS_STDIO		:=	ft_padding.c \
-				ft_putchar_fd.c \
-				ft_putendl_fd.c \
-				ft_putnbr_fd.c \
-				ft_putstr_fd.c
+					ft_putchar_fd.c \
+					ft_putendl_fd.c \
+					ft_putnbr_fd.c \
+					ft_putstr_fd.c
 SRCS_STRING		:=	ft_atoi.c \
-				ft_ctoa.c \
-				ft_index.c \
-				ft_intsize.c \
-				ft_itoa.c \
-				ft_split.c \
-				ft_strchr.c \
-				ft_strdiv.c \
-				ft_strdup.c \
-				ft_strjoin.c \
-				ft_strlcat.c \
-				ft_strlcpy.c \
-				ft_strlen.c \
-				ft_strmapi.c \
-				ft_strncmp.c \
-				ft_strnstr.c \
-				ft_strrchr.c \
-				ft_strtrim.c \
-				ft_substr.c \
-				ft_tolower.c \
-				ft_toupper.c \
-				ft_usize_base.c \
-				ft_utoa_base.c
+					ft_ctoa.c \
+					ft_index.c \
+					ft_intsize.c \
+					ft_itoa.c \
+					ft_split.c \
+					ft_strchr.c \
+					ft_strdiv.c \
+					ft_strdup.c \
+					ft_strjoin.c \
+					ft_strlcat.c \
+					ft_strlcpy.c \
+					ft_strlen.c \
+					ft_strmapi.c \
+					ft_strncmp.c \
+					ft_strnstr.c \
+					ft_strrchr.c \
+					ft_strtrim.c \
+					ft_substr.c \
+					ft_tolower.c \
+					ft_toupper.c \
+					ft_usize_base.c \
+					ft_utoa_base.c
 SRCS_PRINTF		:=	ft_printf.c \
-				ft_create_tag.c \
-				ft_print_type.c \
-				ft_type_c.c \
-				ft_type_s.c \
-				ft_type_d.c \
-				ft_type_ubase.c \
-				ft_type_pct.c
+					ft_create_tag.c \
+					ft_print_type.c \
+					ft_type_c.c \
+					ft_type_s.c \
+					ft_type_d.c \
+					ft_type_ubase.c \
+					ft_type_pct.c
 SRCS_GNL		:=	get_next_line.c
 
 OBJS_STD		:=	$(addprefix ${FOLDER_STD}ft_ctype/, ${SRCS_CTYPE:.c=.o})
+OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_dlist/, ${SRCS_DLIST:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_list/, ${SRCS_LIST:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_math/, ${SRCS_MATH:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_memory/, ${SRCS_MEMORY:.c=.o})
@@ -116,7 +122,7 @@ OBJS			:=	${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
 
 $(NAME):		${OBJS}
 	@ar -rcs $@ $^
-	@echo "${PREFIX}${GREEN}Library created !${RESET}
+	@echo "${PREFIX}${GREEN}Library created !${RESET}"
 
 all:			${NAME}
 

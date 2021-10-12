@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:43:11 by mykman            #+#    #+#             */
-/*   Updated: 2021/10/12 21:50:39 by mykman           ###   ########.fr       */
+/*   Updated: 2021/10/12 21:49:42 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_dlist	*ft_dlstnew(void *content)
 {
-	t_list	*ptr;
+	t_dlist	*ptr;
 
-	ptr = (t_list *)malloc(sizeof(t_list));
+	ptr = (t_dlist *)malloc(sizeof(t_dlist));
 	if (!ptr)
 		return (NULL);
 	ptr->content = content;
+	ptr->previous = NULL;
 	ptr->next = NULL;
 	return (ptr);
 }
