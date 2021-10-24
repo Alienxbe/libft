@@ -26,11 +26,11 @@ t_dlist	*ft_dlstmap(t_dlist *lst, void *(*f)(void *), void (*del)(void *));
 
 int		ft_dlstsize(t_dlist *lst);
 
-void	ft_dlstadd(t_dlist **new, t_dlist **previous, t_dlist **next);
+void	ft_dlstadd(t_dlist *new, t_dlist *previous, t_dlist *next);
 void	ft_dlstadd_front(t_dlist **alst, t_dlist *new);
 void	ft_dlstadd_back(t_dlist **alst, t_dlist *new);
+void	ft_dlstiter(t_dlist *lst, void (*f)(void *));
 void	ft_dlstdelone(t_dlist *lst, void (*del)(void *));
 void	ft_dlstclear(t_dlist **lst, void (*del)(void *));
-void	ft_dlstiter(t_dlist *lst, void (*f)(void *));
 
 #endif

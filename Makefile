@@ -45,6 +45,7 @@ SRCS_CTYPE		:=	ft_isalnum.c \
 SRCS_DLIST		:=	ft_dlstadd_back.c \
 					ft_dlstadd_front.c \
 					ft_dlstadd.c \
+					ft_dlstiter.c \
 					ft_dlstlast.c \
 					ft_dlstnew.c
 SRCS_LIST		:=	ft_lstadd_back.c \

@@ -6,15 +6,15 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 20:05:10 by mykman            #+#    #+#             */
-/*   Updated: 2021/10/12 22:24:39 by mykman           ###   ########.fr       */
+/*   Updated: 2021/10/24 19:53:03 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_dlstadd(t_dlist **new, t_dlist **previous, t_dlist **next)
+void	ft_dlstadd(t_dlist *new, t_dlist *previous, t_dlist *next)
 {
-	if (!new || !previous || !next || !*next)
+	if (!new)
 		return ;
 	new->previous = previous;
 	new->next = next;

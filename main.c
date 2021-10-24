@@ -6,42 +6,32 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2021/10/12 22:22:12 by mykman           ###   ########.fr       */
+/*   Updated: 2021/10/24 20:34:50 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	print_dlist(t_dlist	*lst)
+static void	print_element(void *content)
 {
-	while (lst)
-	{
-		ft_printf("%d\n", *(int *)lst->content);
-		lst = lst->next;
-	}
+	ft_printf("%s\n", (char *)content);
 }
 
 int main(void)
 {
-	t_dlist *a;
+	/*t_dlist *a;
 	t_dlist *b;
 	t_dlist *c;
-	t_dlist *d;
+	t_dlist *d;*/
 
-	int		c1 = 1;
-	int		c2 = 2;
-	int		c3 = 3;
-	int		c4 = 4;
+	t_dlist *list = NULL;
 
-	a = ft_dlstnew(&c1);
-	b = ft_dlstnew(&c2);
-	c = ft_dlstnew(&c3);
-	d = ft_dlstnew(&c4);
+	ft_dlstadd_back(&list, ft_dlstnew("Bonjour"));
+	ft_dlstadd_back(&list, ft_dlstnew("Tout"));
+	ft_dlstadd_back(&list, ft_dlstnew("Va"));
+	ft_dlstadd_back(&list, ft_dlstnew("Bien"));
 
-	ft_dlstadd_back(&a, b);
-
-	print_dlist(a);
-	ft_printf("-------\n%p\n", ft_dlstlast(NULL));
+	ft_dlstiter(list, &print_element);
 
 	return (0);
 }

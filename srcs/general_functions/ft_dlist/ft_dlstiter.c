@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstadd_back.c                                  :+:      :+:    :+:   */
+/*   ft_dlstiter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:55:12 by mykman            #+#    #+#             */
-/*   Updated: 2021/10/24 20:04:12 by mykman           ###   ########.fr       */
+/*   Created: 2021/10/24 20:26:06 by mykman            #+#    #+#             */
+/*   Updated: 2021/10/24 20:27:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_dlstadd_back(t_dlist **alst, t_dlist *new)
+void	ft_dlstiter(t_dlist *lst, void (*f)(void *))
 {
-	if (!alst)
+    if (!lst || !f)
 		return ;
-	if (*alst)
-		ft_dlstadd(new, ft_dlstlast(*alst), NULL);
-	else
-		*alst = new;    
+    while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
