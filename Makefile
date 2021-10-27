@@ -142,8 +142,9 @@ clean:
 	@rm -f ${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
 	@echo "${PREFIX}${BLUE}Cleaning object files...${RESET}"
 
-fclean:			clean
-	@rm -f ${NAME} ${NAME_STD} ${NAME_PRINTF} ${NAME_GNL}
+fclean:
+	@rm -f ${NAME} ${NAME_STD} ${NAME_PRINTF} ${NAME_GNL}\
+				${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
 	@echo "${PREFIX}${RED}Full clean.${RESET}"
 
 re:				fclean all
