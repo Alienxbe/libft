@@ -49,7 +49,9 @@ SRCS_DLIST		:=	ft_dlstadd_back.c \
 					ft_dlstdelone.c \
 					ft_dlstiter.c \
 					ft_dlstlast.c \
-					ft_dlstnew.c
+					ft_dlstnew.c \
+					ft_dlstremove.c \
+					ft_dlstswap.c
 SRCS_LIST		:=	ft_lstadd_back.c \
 					ft_lstadd_front.c \
 					ft_lstclear.c \

@@ -32,6 +32,7 @@ int main(void)
 	ft_dlstadd_back(&list, ft_dlstnew("Bien"));
 
 	ft_dlstiter(list, &print_element);
+	ft_dlstiter(list, &print_element);
 
 	return (0);
 }
