@@ -36,5 +36,5 @@ char	*ft_utoa_base(unsigned long n, int minsize, char *base, char sign_char)
 	}
 	if (sign_char)
 		str[0] = sign_char;
-	return (str);	
+	return (str);
 }

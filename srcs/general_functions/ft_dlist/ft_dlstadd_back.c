@@ -19,5 +19,5 @@ void	ft_dlstadd_back(t_dlist **alst, t_dlist *new)
 	if (*alst)
 		ft_dlstadd(new, ft_dlstlast(*alst), NULL);
 	else
-		*alst = new;    
+		*alst = new;
 }

@@ -58,7 +58,7 @@ int	get_next_line(int fd, char **line)
 	free(buff);
 	*line = ft_substr(saved[fd], 0, ft_index(saved[fd], '\n'));
 	saved[fd] = ft_strdiv(saved[fd], ft_index(saved[fd], '\n') + 1,
-					ft_strlen(saved[fd]) - ft_index(saved[fd], '\n'));
+			ft_strlen(saved[fd]) - ft_index(saved[fd], '\n'));
 	if (!*line || !saved[fd])
 		return (free_return(line, -1));
 	if (!bytes)

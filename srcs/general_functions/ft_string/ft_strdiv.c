@@ -15,11 +15,11 @@
 char	*ft_strdiv(char *s, int start, int len)
 {
 	char	*p;
-	
+
 	p = ft_substr(s, start, len);
 	if (!p)
 		return (s);
 	else if (s)
 		free(s);
-	return(p);
+	return (p);
 }

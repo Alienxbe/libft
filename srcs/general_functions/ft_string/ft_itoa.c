@@ -18,6 +18,6 @@ char	*ft_itoa(int n, int minsize, char pos_char)
 
 	un = -n;
 	if (n < 0)
-		return (ft_utoa_base(un, minsize, BASE_DECI, '-')); 
+		return (ft_utoa_base(un, minsize, BASE_DECI, '-'));
 	return (ft_utoa_base(n, minsize, BASE_DECI, pos_char));
 }
