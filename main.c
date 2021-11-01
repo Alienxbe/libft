@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2021/10/24 20:34:50 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/01 13:29:34 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static void	print_element(void *content)
 
 int main(void)
 {
-	t_dlist	*a = ft_dlstnew("A");
-	t_dlist	*b = ft_dlstnew("B");
-	t_dlist	*c = ft_dlstnew("C");
-	t_dlist	*d = ft_dlstnew("D");
-	t_dlist	*e = ft_dlstnew("E");
+	t_dlist	*a = ft_dlstnew("Bonjour");
+	t_dlist	*b = ft_dlstnew("Comment");
+	t_dlist	*c = ft_dlstnew("allez");
+	t_dlist	*d = ft_dlstnew("vous");
+	t_dlist	*e = ft_dlstnew("?");
 	t_dlist	*list = NULL;
 
 	ft_dlstadd_back(&list, a);
