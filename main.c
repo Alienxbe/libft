@@ -19,19 +19,22 @@ static void	print_element(void *content)
 
 int main(void)
 {
-	/*t_dlist *a;
-	t_dlist *b;
-	t_dlist *c;
-	t_dlist *d;*/
+	t_dlist	*a = ft_dlstnew("A");
+	t_dlist	*b = ft_dlstnew("B");
+	t_dlist	*c = ft_dlstnew("C");
+	t_dlist	*d = ft_dlstnew("D");
+	t_dlist	*e = ft_dlstnew("E");
+	t_dlist	*list = NULL;
 
-	t_dlist *list = NULL;
-
-	ft_dlstadd_back(&list, ft_dlstnew("Bonjour"));
-	ft_dlstadd_back(&list, ft_dlstnew("Tout"));
-	ft_dlstadd_back(&list, ft_dlstnew("Va"));
-	ft_dlstadd_back(&list, ft_dlstnew("Bien"));
+	ft_dlstadd_back(&list, a);
+	ft_dlstadd_back(&list, b);
+	ft_dlstadd_back(&list, c);
+	ft_dlstadd_back(&list, d);
+	ft_dlstadd_back(&list, e);
 
 	ft_dlstiter(list, &print_element);
+	ft_printf("------------\n");
+	list = ft_dlstswap(a, e);
 	ft_dlstiter(list, &print_element);
 
 	return (0);

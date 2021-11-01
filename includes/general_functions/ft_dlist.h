@@ -22,11 +22,12 @@ typedef struct s_dlist
 
 t_dlist	*ft_dlstnew(void *content);
 t_dlist	*ft_dlstremove(t_dlist	*elem);
+t_dlist	*ft_dlstfirst(t_dlist *lst);
 t_dlist	*ft_dlstlast(t_dlist *lst);
 t_dlist	*ft_dlstmap(t_dlist *lst, void *(*f)(void *), void (*del)(void *));
+t_dlist	*ft_dlstswap(t_dlist *elem1, t_dlist *elem2);
 
 int		ft_dlstsize(t_dlist *lst);
-int		ft_dlstswap(t_dlist *elem1, t_dlist *elem2);
 
 void	ft_dlstadd(t_dlist *new, t_dlist *previous, t_dlist *next);
 void	ft_dlstadd_front(t_dlist **alst, t_dlist *new);
