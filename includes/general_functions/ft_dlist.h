@@ -21,7 +21,10 @@ typedef struct s_dlist
 }		t_dlist;
 
 t_dlist	*ft_dlstnew(void *content);
-t_dlist	*ft_dlstremove(t_dlist	*elem);
+t_dlist	*ft_dlstremove(t_dlist *elem);
+t_dlist	*ft_dlstremove_front(t_dlist **lst);
+t_dlist	*ft_dlstremove_back(t_dlist **lst);
+
 t_dlist	*ft_dlstfirst(t_dlist *lst);
 t_dlist	*ft_dlstlast(t_dlist *lst);
 t_dlist	*ft_dlstmap(t_dlist *lst, void *(*f)(void *), void (*del)(void *));

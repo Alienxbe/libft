@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/01 15:50:09 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/01 16:49:31 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ int main(void)
 
 	ft_dlstiter(list, &print_element);
 	ft_printf("------------\n");
-	list = ft_dlstswap(b, a);
+	//list = ft_dlstswap(b, a);
+	free(ft_dlstremove_front(&list));
+	free(ft_dlstremove_back(&list));
 	ft_dlstiter(list, &print_element);
 
 	return (0);
