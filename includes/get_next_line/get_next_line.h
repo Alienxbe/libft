@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 12:01:55 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/26 12:01:55 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/02 10:45:56 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*gnl_strjoin(char *s1, char *s2);
 ** --- Utils ---
 */
 
-int		free_return(char **str, int ret_value);
 char	*gnl_substr(char *s, int start, int len, int s_free);
 
 #endif

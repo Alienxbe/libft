@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnl.c                                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 00:34:22 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/24 18:26:45 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/02 10:45:43 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	free_return(char **str, int ret_value)
+static int	free_return(char **str, int ret_value)
 {
 	if (*str)
 		free(*str);
