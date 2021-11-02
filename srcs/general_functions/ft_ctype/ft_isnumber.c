@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/27 18:05:16 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/02 09:49:48 by mykman           ###   ########.fr       */
+/*   Created: 2021/11/02 09:46:45 by mykman            #+#    #+#             */
+/*   Updated: 2021/11/02 09:49:26 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-
-int	ft_isnumber(char *str);
-
-#endif
+int	ft_isnumber(char *str)
+{
+	if (!str)
+		return (0);
+	while (*str)
+		if (!ft_isdigit(*str++))
+			return (0);
+	return (1);
+}

@@ -41,6 +41,7 @@ SRCS_CTYPE		:=	ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
 					ft_isdigit.c \
+					ft_isnumber.c \
 					ft_isprint.c
 SRCS_DLIST		:=	ft_dlstadd_back.c \
 					ft_dlstadd_front.c \
