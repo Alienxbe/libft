@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:22:25 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/07 23:57:21 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 00:49:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 # define FLAG_HASHTAG		8
 # define FLAG_SPACE			16
 # define FLAG_PLUS			32
-# define FLAGS				"0-# +"
+# define FLAG_AMPERSAND		64
+# define FLAGS				"0-# +&"
 # define TYPES				"cspdiuxX%"
 # define NULL_STR			"(null)"
 

@@ -14,8 +14,7 @@
 
 int	main(void)
 {
-	ft_printf("%d\n", ft_isspace('\r'));
-	ft_putstr_non_printable_fd("Bonjour a tous!\n", 1);
+	ft_printf("%&s\n", "This flag show the '\n' character well");
 	
 	/*char	*line;
 	int		fd;
