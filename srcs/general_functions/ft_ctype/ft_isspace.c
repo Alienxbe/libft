@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.19.be>              +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 16:57:38 by mykman            #+#    #+#             */
-/*   Updated: 2021/01/03 17:27:52 by mykman           ###   ########.fr       */
+/*   Created: 2021/11/07 23:31:54 by mykman            #+#    #+#             */
+/*   Updated: 2021/11/07 23:44:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+int	ft_isspace(int c)
 {
-	unsigned int	nb;
-
-	if (n < 0)
-	{
-		nb = -n;
-		ft_putchar_fd('-', fd);
-	}
-	else
-		nb = n;
-	if (nb > 9)
-		ft_putnbr_fd(nb / 10, fd);
-	ft_putchar_fd('0' + nb % 10, fd);
+	return (c >= 9 && c <= 13);
 }
