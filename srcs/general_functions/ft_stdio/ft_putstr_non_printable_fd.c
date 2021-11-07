@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdio.h                                         :+:      :+:    :+:   */
+/*   ft_putstr_non_printable_fd.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 10:10:31 by anonymou          #+#    #+#             */
-/*   Updated: 2021/11/08 00:45:26 by mykman           ###   ########.fr       */
+/*   Created: 2021/11/08 00:44:50 by mykman            #+#    #+#             */
+/*   Updated: 2021/11/08 00:45:04 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDIO_H
-# define FT_STDIO_H
+#include "libft.h"
 
-void			ft_putchar_fd(const char c, int fd);
-void			ft_putstr_fd(const char *s, int fd);
-void			ft_putstr_non_printable_fd(const char *s, int fd);
-void			ft_putendl_fd(const char *s, int fd);
-void			ft_putnbr_base_fd(int n, char *base, int fd);
-void			ft_padding(const char c, int n);
-
-#endif
+void	ft_putstr_non_printable_fd(const char *s, int fd)
+{
+	while (s && *s)
+	{
+		if (!ft_isprint(*s))
+		{
+			ft_putchar_fd('\\', fd);
+			ft_putnbr_base_fd(*s, BASE_HEXA_L, 1);
+		}
+		else
+			ft_putchar_fd(*s, fd);
+		s++;
+	}
+}

@@ -82,7 +82,8 @@ SRCS_STDIO		:=	ft_padding.c \
 					ft_putchar_fd.c \
 					ft_putendl_fd.c \
 					ft_putnbr_base_fd.c \
-					ft_putstr_fd.c
+					ft_putstr_fd.c \
+					ft_putstr_non_printable_fd.c
 SRCS_STRING		:=	ft_atoi.c \
 					ft_ctoa.c \
 					ft_index.c \
