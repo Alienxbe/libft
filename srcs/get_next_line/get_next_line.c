@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 00:34:22 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/02 10:45:43 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 02:37:26 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,18 @@ static int	free_return(char **str, int ret_value)
 		free(*str);
 	*str = NULL;
 	return (ret_value);
+}
+
+static void	stock_next_line(char **saved, char **line, int bytes)
+{
+	int	eol;
+
+	eol = ft_index(*saved, '\n');
+	if (eol < 0)
+		eol = ft_strlen(*saved);
+	*line = ft_substr(*saved, 0, eol);
+	if (bytes)
+		*saved = ft_strdiv(*saved, eol + 1, ft_strlen(*saved) - eol);
 }
 
 char	*gnl_strjoin(char *s1, char *s2)
@@ -56,9 +68,7 @@ int	get_next_line(int fd, char **line)
 			return (free_return(&buff, -1));
 	}
 	free(buff);
-	*line = ft_substr(saved[fd], 0, ft_index(saved[fd], '\n'));
-	saved[fd] = ft_strdiv(saved[fd], ft_index(saved[fd], '\n') + 1,
-			ft_strlen(saved[fd]) - ft_index(saved[fd], '\n'));
+	stock_next_line(&saved[fd], line, bytes);
 	if (!*line || !saved[fd])
 		return (free_return(line, -1));
 	if (!bytes)

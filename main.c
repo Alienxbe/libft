@@ -14,21 +14,20 @@
 
 int	main(void)
 {
-	ft_printf("%&s\n", "This flag show the '\n' character well");
-	
-	/*char	*line;
+	char	*line;
 	int		fd;
 	int		ret;
 
 	fd = open("test.txt", O_RDONLY);
-	for (int i = 0; i < 1; i++)
+	ret = 1;
+	while (ret)
 	{
 		line = NULL;
 		ret = get_next_line(fd, &line);
-		ft_printf("%d: '%s'\n", ret, line);
-		if (ret > 0)
+		ft_printf("%d: '%&s'\n", ret, line);
+		if (ret >= 0)
 			free(line);
 	}
-	close(fd);*/
+	close(fd);
 	return (0);
 }
