@@ -60,6 +60,7 @@ SRCS_DLIST		:=	ft_dlstadd_back.c \
 					ft_dlstremove_back.c \
 					ft_dlstremove_front.c \
 					ft_dlstremove.c \
+					ft_dlstsize.c \
 					ft_dlstswap.c
 SRCS_LIST		:=	ft_lstadd_back.c \
 					ft_lstadd_front.c \
