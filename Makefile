@@ -54,6 +54,8 @@ SRCS_DLIST		:=	ft_dlstadd_back.c \
 					ft_dlstfirst.c \
 					ft_dlstiter.c \
 					ft_dlstlast.c \
+					ft_dlstmax.c \
+					ft_dlstmin.c \
 					ft_dlstnew.c \
 					ft_dlstremove_back.c \
 					ft_dlstremove_front.c \

@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 23:19:05 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/01 23:19:05 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 14:48:11 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ t_dlist	*ft_dlstnew(void *content);
 t_dlist	*ft_dlstremove(t_dlist *elem);
 t_dlist	*ft_dlstremove_front(t_dlist **lst);
 t_dlist	*ft_dlstremove_back(t_dlist **lst);
+
+t_dlist	*ft_dlstmax(t_dlist	*lst);
+t_dlist	*ft_dlstmin(t_dlist	*lst);
 
 t_dlist	*ft_dlstfirst(t_dlist *lst);
 t_dlist	*ft_dlstlast(t_dlist *lst);
