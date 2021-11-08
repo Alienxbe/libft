@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 23:19:05 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 14:48:11 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:09:32 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_dlist	*ft_dlstlast(t_dlist *lst);
 t_dlist	*ft_dlstmap(t_dlist *lst, void *(*f)(void *), void (*del)(void *));
 t_dlist	*ft_dlstswap(t_dlist *elem1, t_dlist *elem2);
 
-int		ft_dlstsize(t_dlist *lst);
+int		ft_dlstsize(t_dlist *lst, t_dlist *toward);
 
 void	ft_dlstadd(t_dlist *new, t_dlist *previous, t_dlist *next);
 void	ft_dlstadd_front(t_dlist **alst, t_dlist *new);

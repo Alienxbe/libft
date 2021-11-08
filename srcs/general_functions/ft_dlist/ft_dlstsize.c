@@ -6,21 +6,32 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:09 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 14:56:44 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:09:09 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_dlstsize(t_dlist *lst)
+int	ft_dlstsize(t_dlist *lst, t_dlist *toward)
 {
 	int	i;
 
 	i = 0;
-	while (lst)
+	if (lst->next == toward)
 	{
-		i++;
-		lst = lst->next;
+		while (lst)
+		{
+			i++;
+			lst = lst->next;
+		}
+	}
+	else if (lst->previous == toward)
+	{
+		while (lst)
+		{
+			i++;
+			lst = lst->previous;
+		}
 	}
 	return (i);
 }
