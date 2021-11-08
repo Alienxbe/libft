@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:09 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 15:09:09 by mykman           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:12:00 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int	ft_dlstsize(t_dlist *lst, t_dlist *toward)
 			lst = lst->previous;
 		}
 	}
+	else
+		i++;
 	return (i);
 }
