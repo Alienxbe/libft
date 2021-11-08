@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
-/*                           a                     +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 00:35:21 by mykman           ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/08 13:51:11 by mykman            #+#    #+#             */
+/*   Updated: 2021/11/08 14:08:33 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	*ft_max(int *tab, int length)
 {
-	int	lst[] = {5, 3, 2, 10};
-	ft_printf("%d\n", *ft_min(lst, 4));
-	return (0);
+	int	*max;
+
+	max = tab;
+	while (length--)
+		if (tab[length] > *max)
+			max = tab + length;
+	return (max);
 }

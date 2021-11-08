@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anonymou <anonymou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2021/08/29 10:07:56 by anonymous        ###   ########.fr       */
+/*   Updated: 2021/11/08 14:13:23 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@
 # define BASE_HEXA_U		"0123456789ABCDEF"
 
 int	ft_pow(int n, int pow);
+
+int	*ft_max(int *tab, int length);
+int	*ft_min(int *tab, int length);
 
 #endif
