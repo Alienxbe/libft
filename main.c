@@ -14,7 +14,10 @@
 
 int	main(void)
 {
-	int	lst[] = {5, 3, 2, 10};
-	ft_printf("%d\n", *ft_min(lst, 4));
+	char *str;
+
+	str = ft_strjoinx(3, "format/", "1", ".txt");
+	ft_printf("%s\n", str);
+	free(str);
 	return (0);
 }
