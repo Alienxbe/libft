@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_tag.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:55:45 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/17 00:00:58 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_get_width(const char **format, va_list args)
 	if (ft_isdigit(**format))
 	{
 		width = ft_atoi(*format);
-		*format += ft_intsize(width, 0);
+		*format += ft_intsize(width);
 	}
 	else if (**format == '*')
 	{
