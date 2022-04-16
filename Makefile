@@ -98,6 +98,7 @@ SRCS_STRING		:=	ft_atoi.c \
 					ft_strchr.c \
 					ft_strdiv.c \
 					ft_strdup.c \
+					ft_striteri.c \
 					ft_strjoin.c \
 					ft_strjoinx.c \
 					ft_strlcat.c \

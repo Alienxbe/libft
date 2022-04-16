@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 19:52:27 by mykman            #+#    #+#             */
-/*   Updated: 2021/06/27 19:53:01 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/16 19:50:40 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_intsize(int n, int c)
+int	ft_intsize(long n)
 {
-	if (!n)
-		return (c);
 	if (n < 0)
-		return (ft_intsize(n / -10, c + 2));
-	return (ft_intsize(n / 10, c + 1));
+		return (ft_intsize(-n) + 1);
+	if (n < 10)
+		return (1);
+	return (ft_intsize(n / 10) + 1);
 }

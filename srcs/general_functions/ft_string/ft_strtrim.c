@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 17:31:43 by mykman            #+#    #+#             */
-/*   Updated: 2020/12/27 20:15:54 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/16 20:02:19 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	size;
+	size_t	len;
 
 	if (!s1 || !set)
-		return (0);
-	while (*s1 && ft_strchr(set, *s1))
+		return (NULL);
+	while (ft_strchr(set, *s1) && *s1)
 		s1++;
-	size = ft_strlen(s1);
-	while (size && ft_strchr(set, s1[size]))
-		size--;
-	return (ft_substr(s1, 0, size + 1));
+	len = ft_strlen(s1) - 1;
+	while (len + 1 && ft_strchr(set, s1[len]))
+		len--;
+	return (ft_substr(s1, 0, len + 1));
 }

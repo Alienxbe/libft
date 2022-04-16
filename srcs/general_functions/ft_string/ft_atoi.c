@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:03:07 by mykman            #+#    #+#             */
-/*   Updated: 2021/03/22 18:51:40 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/16 19:49:51 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,22 @@
 int	ft_atoi(const char *str)
 {
 	unsigned long long	n;
-	int					sign;
-	int					i;
+	char				sign;
 
-	if (!str)
-		return (0);
 	n = 0;
-	i = 0;
 	sign = 1;
-	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\f' || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '+' || *str == '-')
+		if (*str++ == '-')
+			sign = -1;
+	while (ft_isdigit(*str))
 	{
-		n = n * 10 + str[i++] - '0';
-		if (n > LLONG_MAX && sign == 1)
+		n = n * 10 + *str++ - '0';
+		if (n > LLONG_MAX && sign > 0)
 			return (-1);
-		if (n > LLONG_MAX && sign == -1)
+		if (n > LLONG_MAX && sign < 0)
 			return (0);
 	}
-	return ((int)(n * sign));
+	return (n * sign);
 }

@@ -3,49 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:50:35 by mykman            #+#    #+#             */
-/*   Updated: 2021/03/22 19:56:39 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/16 19:32:53 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_freeall(t_list **lst)
-{
-	t_list	*tmp;
-
-	while (*lst)
-	{
-		tmp = *lst;
-		*lst = (*lst)->next;
-		free(tmp);
-	}
-}
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*clst;
-	t_list	*tmp;
+	t_list	*lstnew;
+	t_list	*new;
 
-	clst = ft_lstnew(NULL);
-	if (!f || !clst)
+	if (!lst || !f)
 		return (NULL);
+	lstnew = NULL;
 	while (lst)
 	{
-		ft_lstlast(clst)->next = ft_lstnew(f(lst->content));
-		if (!ft_lstlast(clst)->next)
+		new = ft_lstnew(f(lst->content));
+		if (!new)
 		{
-			if (!del)
-				ft_freeall(&clst);
-			else
-				ft_lstclear(&clst, del);
+			ft_lstclear(&lstnew, del);
 			return (NULL);
 		}
+		ft_lstadd_back(&lstnew, new);
 		lst = lst->next;
 	}
-	tmp = clst->next;
-	free(clst);
-	return (tmp);
+	return (lstnew);
 }
