@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2021/12/12 14:44:53 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/16 19:38:46 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 int	main(void)
 {
+	t_list	*lst = NULL;
+	int		nl[] = {0, 1, 2, 3};
+
+	for (int i = 0; i < 4; i++)
+		ft_lstadd_back(&lst, ft_lstnew(nl + i));
+	ft_printf("size : %d\n", ft_lstsize(lst));
+	ft_lstclear(&lst, NULL);
 	return (0);
 }
