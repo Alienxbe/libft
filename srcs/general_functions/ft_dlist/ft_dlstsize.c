@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:09 by mykman            #+#    #+#             */
-/*   Updated: 2021/12/12 14:43:28 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/17 21:48:55 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_dlstsize(t_dlist *lst, t_dlist *toward)
 {
 	int	i;
 
+	if (!lst)
+		return (0);
 	i = 0;
 	if (lst->next == toward)
 	{

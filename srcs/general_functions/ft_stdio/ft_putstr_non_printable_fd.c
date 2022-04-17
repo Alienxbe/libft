@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable_fd.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 00:44:50 by mykman            #+#    #+#             */
-/*   Updated: 2021/12/12 14:44:14 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/17 22:27:22 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_putstr_non_printable_fd(const char *s, int fd)
 {
-	while (s && *s)
+	if (!s)
+		return (NULL);
+	while (*s)
 	{
 		if (!ft_isprint(*s))
 		{

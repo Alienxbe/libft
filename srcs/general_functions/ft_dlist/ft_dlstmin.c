@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstmin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:34:40 by mykman            #+#    #+#             */
-/*   Updated: 2021/12/12 14:43:46 by mykman           ###   ########.fr       */
+/*   Updated: 2022/04/17 21:47:22 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_dlist	*ft_dlstmin(t_dlist	*lst)
 {
 	t_dlist	*min;
 
+	if (!lst)
+		return (NULL);
 	min = lst;
 	while (lst)
 	{

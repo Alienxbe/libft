@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:26:57 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 19:57:57 by maykman          ###   ########.fr       */
+/*   Updated: 2022/04/17 22:34:05 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = -1;
-	while (s && s[++i])
+	while (s[++i])
 		f(i, s + i);
 }
