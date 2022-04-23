@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 00:44:50 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 22:27:22 by maykman          ###   ########.fr       */
+/*   Updated: 2022/04/22 01:34:42 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_non_printable_fd(const char *s, int fd)
 {
 	if (!s)
-		return (NULL);
+		return ;
 	while (*s)
 	{
 		if (!ft_isprint(*s))

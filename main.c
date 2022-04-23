@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 19:38:46 by maykman          ###   ########.fr       */
+/*   Updated: 2022/04/22 01:41:06 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 int	main(void)
 {
-	t_list	*lst = NULL;
-	int		nl[] = {0, 1, 2, 3};
+	int		fd;
+	char	*line;
 
-	for (int i = 0; i < 4; i++)
-		ft_lstadd_back(&lst, ft_lstnew(nl + i));
-	ft_printf("size : %d\n", ft_lstsize(lst));
-	ft_lstclear(&lst, NULL);
+	fd = open("test.txt", O_RDONLY);
+	line = NULL;
+	for (int i = 0; i < 10 ; i++)
+	{
+		ft_printf("%d : ", get_next_line(fd, &line));
+		ft_printf("%p (%03d): ", line, *line);
+		ft_printf("%s\n", line);
+		if (line)
+			free(line);
+	}
 	return (0);
 }
