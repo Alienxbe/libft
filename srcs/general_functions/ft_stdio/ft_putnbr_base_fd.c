@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 16:57:38 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 00:35:58 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 01:57:00 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 
 static int	check_base(char *base)
 {
-	if (ft_strlen(base) <= 1)
+	int	i;
+
+	if (!base)
 		return (0);
-	while (*base)
-	{
-		if (ft_isspace(*base) || *base == '+' || *base == '-'
-			|| ft_index(base + 1, *base) >= 0)
+	i = -1;
+	while (base[++i])
+		if (ft_strchr(base + i + 1, base[i]) || ft_strchr("+-", base[i]))
 			return (0);
-		base++;
-	}
-	return (1);
+	if (i < 2)
+		return (0);
+	return (i);
 }
 
-void	ft_putnbr_base_fd(int n, char *base, int fd)
+void	ft_putnbr_base(int n, char *base, int fd)
 {
-	unsigned int	nb;
-	size_t			len_base;
+	unsigned int	un;
+	size_t			base_len;
 
-	if (!check_base(base))
+	base_len = check_base(base);
+	if (!base_len)
 		return ;
-	len_base = ft_strlen(base);
+	un = n;
 	if (n < 0)
 	{
-		nb = -n;
 		ft_putchar_fd('-', fd);
+		un = -n;
 	}
-	else
-		nb = n;
-	if (nb >= len_base)
-		ft_putnbr_base_fd(nb / len_base, base, fd);
-	ft_putchar_fd(base[nb % len_base], fd);
+	if (un >= base_len)
+		ft_putnbr_base(un / base_len, base, fd);
+	ft_putchar_fd(base[un % base_len], fd);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ctoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 21:05:23 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/26 21:06:54 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 01:02:28 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_ctoa(char c)
 {
 	char	*s;
 
-	s = (char *)ft_calloc(sizeof(char), 2);
+	s = (char *)ft_calloc(sizeof(*s), 2);
 	if (s)
 		*s = c;
 	return (s);

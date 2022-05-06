@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_todigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 07:52:01 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:38:41 by maykman          ###   ########.fr       */
+/*   Created: 2022/05/06 02:06:57 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 02:07:39 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_todigit(int c)
 {
-	char	*ptr;
-
-	ptr = (char *)s + ft_strlen(s);
-	if (s)
-		while (ptr >= s)
-			if (*ptr-- == (unsigned char)c)
-				return (ptr + 1);
-	return (NULL);
+	if (ft_isdigit(c))
+		return (c - '0');
+	return (-1);
 }

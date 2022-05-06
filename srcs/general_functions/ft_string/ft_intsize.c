@@ -6,11 +6,13 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 19:52:27 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 19:50:40 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/06 01:06:57 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_intsize(long n)
+#include "libft.h"
+
+size_t	ft_intsize(long n)
 {
 	if (n < 0)
 		return (ft_intsize(-n) + 1);

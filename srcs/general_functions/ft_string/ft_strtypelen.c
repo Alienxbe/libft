@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtypelen.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 07:52:01 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:38:41 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/24 18:25:36 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:20:33 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+size_t	ft_strtypelen(const char *s, int (*istype)(int))
 {
-	char	*ptr;
+	size_t	len;
 
-	ptr = (char *)s + ft_strlen(s);
+	len = 0;
 	if (s)
-		while (ptr >= s)
-			if (*ptr-- == (unsigned char)c)
-				return (ptr + 1);
-	return (NULL);
+		while (istype(s[len]))
+			len++;
+	return (len);
 }

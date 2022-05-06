@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2021/11/08 14:13:23 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 23:16:34 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_pow(int n, int pow);
 
 int	*ft_max(int *tab, int length);
 int	*ft_min(int *tab, int length);
+
+int	ft_cmp_bn(const char *n1, const char *n2);
 
 #endif

@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_cmp_bn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 07:52:01 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:38:41 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/24 18:53:58 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:16:11 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_cmp_bn(const char *n1, const char *n2)
 {
-	char	*ptr;
+	size_t	n1_size;
+	size_t	n2_size;
+	size_t	i;
 
-	ptr = (char *)s + ft_strlen(s);
-	if (s)
-		while (ptr >= s)
-			if (*ptr-- == (unsigned char)c)
-				return (ptr + 1);
-	return (NULL);
+	n1_size = ft_strtypelen(n1, &ft_isdigit);
+	n2_size = ft_strtypelen(n2, &ft_isdigit);
+	if (n1_size != n2_size)
+		return (n1_size - n2_size);
+	i = -1;
+	while (++i < n1_size)
+		if (n1[i] != n2[i])
+			return (n1[i] - n2[i]);
+	return (0);
 }

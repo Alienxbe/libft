@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:03:07 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 22:28:20 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/06 01:01:28 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_atoi(const char *str)
 	unsigned long long	n;
 	char				sign;
 
-	if (!str)
-		return (0);
 	n = 0;
 	sign = 1;
+	if (!str)
+		return (n);
 	while ((*str >= 9 && *str <= 13) || *str == ' ')
 		str++;
 	if (*str == '+' || *str == '-')

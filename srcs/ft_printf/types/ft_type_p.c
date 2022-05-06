@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_type_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 07:52:01 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:38:41 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/29 01:50:12 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_type_p(t_tag tag, va_list args)
 {
-	char	*ptr;
+	char	*s;
+	size_t	n;
 
-	ptr = (char *)s + ft_strlen(s);
-	if (s)
-		while (ptr >= s)
-			if (*ptr-- == (unsigned char)c)
-				return (ptr + 1);
-	return (NULL);
+	n = va_arg(args, size_t);
+	s = precision_condition(n, tag, BASE_HEXA_L);
+	s = filling_zeroes(s, "0x", tag);
+	s = ft_addprefix(s, "0x");
+	return (ft_print(s, tag));
 }

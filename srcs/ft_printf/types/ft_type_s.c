@@ -3,28 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_type_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 00:32:07 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
+/*   Created: 2022/04/28 20:27:12 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_type_s(t_tag *tag, va_list args)
+int	ft_type_s(t_tag tag, va_list args)
 {
 	char	*s;
 
 	s = (char *)va_arg(args, char *);
 	if (!s)
 		s = NULL_STR;
-	if (!(tag->flags & FLAG_PRECISION) || tag->prec < 0
-		|| tag->prec > (int)ft_strlen(s))
-		s = ft_strdup(s);
+	if (tag.flags & FLAG_PRECISION)
+		s = ft_substr(s, 0, tag.prec);
 	else
-		s = ft_substr(s, 0, tag->prec);
-	if (!s)
-		return (MALLOC_ERROR);
-	return (ft_print_type(tag, s));
+		s = ft_strdup(s);
+	return (ft_print(s, tag));
 }

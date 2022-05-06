@@ -5,78 +5,69 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/01 17:21:31 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 22:25:58 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/16 22:15:27 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-t_print	**init_type_table(void)
+static int	ft_checkformat(int fd, const char *format)
 {
-	t_print	**table;
-
-	table = malloc(sizeof(t_print *) * LENGTH);
-	if (!table)
-		return (NULL);
-	table[CHAR] = &ft_type_c;
-	table[STR] = &ft_type_s;
-	table[PTR] = &ft_type_ubase;
-	table[D_INT] = &ft_type_d;
-	table[I_INT] = &ft_type_d;
-	table[U_INT] = &ft_type_ubase;
-	table[LC_HEXA] = &ft_type_ubase;
-	table[UC_HEXA] = &ft_type_ubase;
-	table[PCT] = &ft_type_pct;
-	return (table);
+	if (!format)
+		return (1);
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			if (ft_set_tag(fd, &format).type == (t_type)NONE)
+				return (1);
+		}
+		else
+			format++;
+	}
+	return (0);
 }
 
-int	ft_conversion(const char **format, t_print **type_table, va_list args)
+static int	ft_printf_main(int fd, const char *format, va_list args)
 {
-	t_tag	*tag;
-	int		length;
+	const char	*ptr;
+	int			len;
 
-	tag = ft_create_tag(format, args);
-	if (!tag)
-		return (MALLOC_ERROR);
-	if (tag->type == NONE)
+	if (ft_checkformat(fd, format))
+		return (-1);
+	len = 0;
+	ptr = ft_strchr(format, '%');
+	while (ptr)
 	{
-		free(tag);
-		return (TAG_BUILD_ERROR);
+		len += write(fd, format, ptr - format);
+		format = ptr;
+		len += ft_conversion(fd, &format, args);
+		ptr = ft_strchr(format, '%');
 	}
-	length = (*type_table[tag->type])(tag, args);
-	free(tag);
-	if (length < 0)
-		return (length);
-	return (length);
+	if (!ptr)
+			len += ft_puts(format, fd);
+	return (len);
+}
+
+int	ft_fprintf(int fd, const char *format, ...)
+{
+	va_list	args;
+	int		len;
+
+	va_start(args, format);
+	len = ft_printf_main(fd, format, args);
+	va_end(args);
+	return (len);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	t_print	**type_table;
-	int		length;
-	int		c_length;
+	int		len;
 
-	length = 0;
 	va_start(args, format);
-	type_table = init_type_table();
-	if (!type_table)
-		return (MALLOC_ERROR);
-	while (*format)
-	{
-		c_length = 1;
-		if (*format == '%')
-			c_length = ft_conversion(&format, type_table, args);
-		else
-			ft_putchar_fd(*format, 1);
-		if (c_length < 0)
-			return (c_length);
-		length += c_length;
-		format++;
-	}
+	len = ft_printf_main(STDOUT_FILENO, format, args);
 	va_end(args);
-	free(type_table);
-	return (length);
+	return (len);
 }

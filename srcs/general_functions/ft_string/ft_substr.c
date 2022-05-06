@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:45:37 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 02:34:42 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 01:40:15 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*p;
+	char	*cpy;
 
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s) - start + 1)
 		len = ft_strlen(s) - start;
-	p = (char *)ft_calloc(sizeof(*p), len + 1);
-	if (start > ft_strlen(s) || !p)
+	else if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	cpy = ft_calloc(len + 1, sizeof(char));
+	if (!cpy)
 		return (NULL);
-	return (ft_memcpy(p, s + start, len));
+	return (ft_memcpy(cpy, s + start, len));
 }

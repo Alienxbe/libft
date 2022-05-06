@@ -44,6 +44,7 @@ SRCS_CTYPE		:=	ft_isalnum.c \
 					ft_isnumber.c \
 					ft_isprint.c \
 					ft_isspace.c \
+					ft_todigit.c \
 					ft_tolower.c \
 					ft_toupper.c
 SRCS_DLIST		:=	ft_dlstadd_back.c \
@@ -71,7 +72,8 @@ SRCS_LIST		:=	ft_lstadd_back.c \
 					ft_lstmap.c \
 					ft_lstnew.c \
 					ft_lstsize.c
-SRCS_MATH		:=	ft_pow.c \
+SRCS_MATH		:=	ft_cmp_bn.c \
+					ft_pow.c \
 					ft_max.c \
 					ft_min.c
 SRCS_MEMORY		:=	ft_bzero.c \
@@ -84,12 +86,17 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memset.c \
 					ft_ternary.c
 SRCS_STDIO		:=	ft_padding.c \
+					ft_print_memory_fd.c \
 					ft_putchar_fd.c \
 					ft_putendl_fd.c \
 					ft_putnbr_base_fd.c \
+					ft_putnbr_fd.c \
+					ft_putnchar.c \
+					ft_puts.c \
 					ft_putstr_fd.c \
 					ft_putstr_non_printable_fd.c
-SRCS_STRING		:=	ft_atoi.c \
+SRCS_STRING		:=	ft_addprefix.c \
+					ft_atoi.c \
 					ft_ctoa.c \
 					ft_index.c \
 					ft_intsize.c \
@@ -109,17 +116,22 @@ SRCS_STRING		:=	ft_atoi.c \
 					ft_strnstr.c \
 					ft_strrchr.c \
 					ft_strtrim.c \
+					ft_strtypelen.c \
 					ft_substr.c \
-					ft_usize_base.c \
-					ft_utoa_base.c
+					ft_zutoa_base.c
 SRCS_PRINTF		:=	ft_printf.c \
-					ft_create_tag.c \
-					ft_print_type.c \
+					ft_conversion.c \
+					ft_tag.c \
+					ft_utils.c
+SRCS_TYPEPRINTF	:=	ft_print.c \
 					ft_type_c.c \
-					ft_type_s.c \
 					ft_type_d.c \
-					ft_type_ubase.c \
-					ft_type_pct.c
+					ft_type_lx.c \
+					ft_type_p.c \
+					ft_type_pct.c \
+					ft_type_s.c \
+					ft_type_u.c \
+					ft_type_ux.c
 SRCS_GNL		:=	get_next_line.c
 
 OBJS_STD		:=	$(addprefix ${FOLDER_STD}ft_ctype/, ${SRCS_CTYPE:.c=.o})
@@ -130,6 +142,7 @@ OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_memory/, ${SRCS_MEMORY:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_stdio/, ${SRCS_STDIO:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_string/, ${SRCS_STRING:.c=.o})
 OBJS_PRINTF		:=	$(addprefix ${FOLDER_PRINTF}, ${SRCS_PRINTF:.c=.o})
+OBJS_PRINTF		+=	$(addprefix ${FOLDER_PRINTF}types/, ${SRCS_TYPEPRINTF:.c=.o})
 OBJS_GNL		:=	$(addprefix ${FOLDER_GNL}, ${SRCS_GNL:.c=.o})
 OBJS			:=	${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
 

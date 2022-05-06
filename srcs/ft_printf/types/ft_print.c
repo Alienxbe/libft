@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 15:07:34 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:37:38 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/28 20:16:42 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_print(char *str, t_tag tag)
 {
-	size_t	len;
+	int		len;
+	char	spacer;
 
+	if (!str)
+		return (0);
+	spacer = ' ';
+	if (tag.flags & FLAG_ZERO)
+		spacer = '0';
 	len = 0;
-	if (s)
-		while (s[len])
-			len++;
+	if (!(tag.flags & FLAG_MINUS))
+		len += ft_putnchar(spacer, tag.width - ft_strlen(str), tag.fd);
+	len += ft_puts(str, tag.fd);
+	if (!*str && tag.type == (t_type)CHAR)
+		len += write(tag.fd, "\0", 1);
+	if (tag.flags & FLAG_MINUS)
+		len += ft_putnchar(spacer, tag.width - ft_strlen(str), tag.fd);
+	free(str);
 	return (len);
 }

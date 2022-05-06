@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_type_pct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/14 10:21:56 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
+/*   Created: 2022/04/29 01:46:35 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_type_pct(t_tag *tag, va_list args)
+int	ft_type_pct(t_tag tag, va_list args)
 {
 	(void)args;
-	return (ft_print_type(tag, ft_ctoa('%')));
+	return (ft_print(ft_ctoa('%'), tag));
 }
