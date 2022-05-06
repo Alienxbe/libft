@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:34:16 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 20:01:16 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/06 23:59:39 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		len = n;
 	return (ft_memcmp(s1, s2, len));
 }
-

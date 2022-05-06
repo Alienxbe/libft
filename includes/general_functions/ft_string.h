@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2022/05/06 23:34:24 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/06 23:58:13 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strtypelen(const char *s, int (*istype)(int));
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_intsize(long);
+size_t	ft_intsize(long n);
 int		ft_index(const char *s, char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
