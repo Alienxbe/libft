@@ -44,6 +44,7 @@ SRCS_CTYPE		:=	ft_isalnum.c \
 					ft_isnumber.c \
 					ft_isprint.c \
 					ft_isspace.c \
+					ft_todigit.c \
 					ft_tolower.c \
 					ft_toupper.c
 SRCS_DLIST		:=	ft_dlstadd_back.c \
@@ -84,9 +85,11 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memset.c \
 					ft_ternary.c
 SRCS_STDIO		:=	ft_padding.c \
+					ft_print_memory_fd.c \
 					ft_putchar_fd.c \
 					ft_putendl_fd.c \
 					ft_putnbr_base_fd.c \
+					ft_putnbr_fd.c \
 					ft_putstr_fd.c \
 					ft_putstr_non_printable_fd.c
 SRCS_STRING		:=	ft_atoi.c \
@@ -109,9 +112,7 @@ SRCS_STRING		:=	ft_atoi.c \
 					ft_strnstr.c \
 					ft_strrchr.c \
 					ft_strtrim.c \
-					ft_substr.c \
-					ft_usize_base.c \
-					ft_utoa_base.c
+					ft_substr.c
 SRCS_PRINTF		:=	ft_printf.c \
 					ft_create_tag.c \
 					ft_print_type.c \
@@ -131,7 +132,7 @@ OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_stdio/, ${SRCS_STDIO:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_string/, ${SRCS_STRING:.c=.o})
 OBJS_PRINTF		:=	$(addprefix ${FOLDER_PRINTF}, ${SRCS_PRINTF:.c=.o})
 OBJS_GNL		:=	$(addprefix ${FOLDER_GNL}, ${SRCS_GNL:.c=.o})
-OBJS			:=	${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
+OBJS			:=	${OBJS_STD}
 
 # RULES
 %.o:			%.c

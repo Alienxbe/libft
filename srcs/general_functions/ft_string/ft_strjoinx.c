@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoinx.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:27:19 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/16 14:27:50 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 01:37:09 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoinx(int n, ...)
 			tmp = ft_strjoin(final_str, va_arg(args, char *));
 			free(final_str);
 			if (!tmp)
-				return (NULL);
+				break;
 			final_str = tmp;
 		}
 	}

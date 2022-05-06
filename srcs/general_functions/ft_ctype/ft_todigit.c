@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_c.c                                        :+:      :+:    :+:   */
+/*   ft_todigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 17:50:16 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/27 01:31:34 by mykman           ###   ########.fr       */
+/*   Created: 2022/05/06 02:06:57 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 02:07:39 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_type_c(t_tag *tag, va_list args)
+int	ft_todigit(int c)
 {
-	return (ft_print_type(tag, ft_ctoa((char)va_arg(args, int))));
+	if (ft_isdigit(c))
+		return (c - '0');
+	return (-1);
 }

@@ -3,24 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 19:56:40 by mykman            #+#    #+#             */
-/*   Updated: 2021/09/24 18:21:13 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/06 01:03:13 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_index(const char *s, char c)
 {
 	int	i;
 
-	if (!s)
+	i = ft_strchr(s, c) - s;
+	if (i < 0 || !s[i])
 		return (-1);
-	i = -1;
-	while (s[++i])
-		if (s[i] == c)
-			return (i);
-	if (s[i] == c)
-		return (i);
-	return (-1);
+	return (i);
 }

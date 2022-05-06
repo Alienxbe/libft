@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/22 01:41:06 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/06 02:01:14 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,7 @@
 
 int	main(void)
 {
-	int		fd;
-	char	*line;
-
-	fd = open("test.txt", O_RDONLY);
-	line = NULL;
-	for (int i = 0; i < 10 ; i++)
-	{
-		ft_printf("%d : ", get_next_line(fd, &line));
-		ft_printf("%p (%03d): ", line, *line);
-		ft_printf("%s\n", line);
-		if (line)
-			free(line);
-	}
+	char	*s = "Ceci est une chaine de charactere";
+	ft_print_memory_fd(s, 420, 1);
 	return (0);
 }
