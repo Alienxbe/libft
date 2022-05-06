@@ -6,7 +6,7 @@
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 22:15:27 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/07 00:50:31 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,14 @@ static int	ft_printf_main(int fd, const char *format, va_list args)
 	return (len);
 }
 
+/**
+ * @brief Work the same as printf original function
+ * 
+ * @param fd: The file descriptor where the function will print
+ * @param format: Main string wich can have conversion
+ * @param ...: All conversion values
+ * @return int: The number of character written to the FD
+ */
 int	ft_fprintf(int fd, const char *format, ...)
 {
 	va_list	args;
@@ -61,6 +69,13 @@ int	ft_fprintf(int fd, const char *format, ...)
 	return (len);
 }
 
+/**
+ * @brief Work the same as printf original function
+ *
+ * @param format: Main string wich can have conversion
+ * @param ...: All conversion values
+ * @return int: The number of character written to STDOUT
+ */
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 00:34:22 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 02:37:26 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/07 00:50:37 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,13 @@ char	*gnl_strjoin(char *s1, char *s2)
 	return (ptr);
 }
 
+/**
+ * @brief Read the next line on a file descriptor
+ *
+ * @param fd
+ * @param line: The address where the line is stored
+ * @return int
+ */
 int	get_next_line(int fd, char **line)
 {
 	static char	*saved[FOPEN_MAX];
