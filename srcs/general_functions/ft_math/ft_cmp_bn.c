@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_math.h                                          :+:      :+:    :+:   */
+/*   ft_cmp_bn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2022/05/06 23:16:34 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/24 18:53:58 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:16:11 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MATH_H
-# define FT_MATH_H
+#include "libft.h"
 
-# define BASE_BINARY		"01"
-# define BASE_DECI			"0123456789"
-# define BASE_OCTAL			"01234567"
-# define BASE_HEXA_L		"0123456789abcdef"
-# define BASE_HEXA_U		"0123456789ABCDEF"
+int	ft_cmp_bn(const char *n1, const char *n2)
+{
+	size_t	n1_size;
+	size_t	n2_size;
+	size_t	i;
 
-int	ft_pow(int n, int pow);
-
-int	*ft_max(int *tab, int length);
-int	*ft_min(int *tab, int length);
-
-int	ft_cmp_bn(const char *n1, const char *n2);
-
-#endif
+	n1_size = ft_strtypelen(n1, &ft_isdigit);
+	n2_size = ft_strtypelen(n2, &ft_isdigit);
+	if (n1_size != n2_size)
+		return (n1_size - n2_size);
+	i = -1;
+	while (++i < n1_size)
+		if (n1[i] != n2[i])
+			return (n1[i] - n2[i]);
+	return (0);
+}

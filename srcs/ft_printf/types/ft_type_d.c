@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_type_d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 13:26:55 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 23:30:26 by maykman          ###   ########.fr       */
+/*   Created: 2022/04/28 23:06:47 by maykman           #+#    #+#             */
+/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static const char	*get_prefix(int n, int flags)
+{
+	if (n < 0)
+		return ("-");
+	else if (flags & FLAG_PLUS)
+		return ("+");
+	else if (flags & FLAG_SPACE)
+		return (" ");
+	return (NULL);
+}
+
+int	ft_type_d(t_tag tag, va_list args)
 {
 	char			*s;
-	size_t			nsize;
+	const char		*prefix;
+	int				n;
 	unsigned int	un;
 
-	nsize = ft_intsize(n);
-	s = ft_calloc(nsize + 1, sizeof(*s));
-	if (!s)
-		return (NULL);
-	s[0] = '0';
+	n = va_arg(args, int);
 	un = n;
 	if (n < 0)
-	{
 		un = -n;
-		s[0] = '-';
-	}
-	while (un)
-	{
-		s[--nsize] = '0' + un % 10;
-		un /= 10;
-	}
-	return (s);
+	prefix = get_prefix(n, tag.flags);
+	s = precision_condition(un, tag, BASE_DECI);
+	s = filling_zeroes(s, prefix, tag);
+	s = ft_addprefix(s, prefix);
+	return (ft_print(s, tag));
 }
