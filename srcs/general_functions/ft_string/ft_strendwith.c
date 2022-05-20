@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strendwith.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/20 07:11:51 by mykman           ###   ########.fr       */
+/*   Created: 2022/05/20 06:29:00 by mykman            #+#    #+#             */
+/*   Updated: 2022/05/20 06:36:58 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_strendwith(const char *str, const char *suffix)
 {
-	ft_printf("%d\n", ft_strendwith("Bonjour.exe", "exe"));
-	return (0);
+	size_t	lensuffix;
+
+	if (!str || !suffix)
+		return (0);
+	lensuffix = ft_strlen(suffix);
+	return (!ft_strncmp(str + ft_strlen(str) - lensuffix, suffix, lensuffix));
 }

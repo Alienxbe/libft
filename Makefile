@@ -105,6 +105,7 @@ SRCS_STRING		:=	ft_addprefix.c \
 					ft_strchr.c \
 					ft_strdiv.c \
 					ft_strdup.c \
+					ft_strendwith.c \
 					ft_striteri.c \
 					ft_strjoin.c \
 					ft_strjoinx.c \
@@ -115,6 +116,7 @@ SRCS_STRING		:=	ft_addprefix.c \
 					ft_strncmp.c \
 					ft_strnstr.c \
 					ft_strrchr.c \
+					ft_strstartwith.c \
 					ft_strtrim.c \
 					ft_strtypelen.c \
 					ft_substr.c \

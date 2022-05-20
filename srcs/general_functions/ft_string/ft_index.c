@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 19:56:40 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:03:13 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/20 07:09:19 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_index(const char *s, char c)
 {
-	int	i;
+	char	*ptr;
 
-	i = ft_strchr(s, c) - s;
-	if (i < 0 || !s[i])
+	ptr = ft_strchr(s, c);
+	if (!ptr || !*ptr)
 		return (-1);
-	return (i);
+	return (ptr - s);
 }

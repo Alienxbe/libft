@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstartwith.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/20 07:11:51 by mykman           ###   ########.fr       */
+/*   Created: 2022/05/20 06:25:26 by mykman            #+#    #+#             */
+/*   Updated: 2022/05/20 06:37:25 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_strstartwith(const char *str, const char *prefix)
 {
-	ft_printf("%d\n", ft_strendwith("Bonjour.exe", "exe"));
-	return (0);
+	return (!ft_strncmp(str, prefix, ft_strlen(prefix)));
 }
