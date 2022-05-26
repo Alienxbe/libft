@@ -97,6 +97,7 @@ SRCS_STDIO		:=	ft_padding.c \
 					ft_putstr_non_printable_fd.c
 SRCS_STRING		:=	ft_addprefix.c \
 					ft_atoi.c \
+					ft_atoi_l.c \
 					ft_ctoa.c \
 					ft_index.c \
 					ft_intsize.c \
