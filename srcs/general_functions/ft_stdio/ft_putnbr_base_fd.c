@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 16:57:38 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:57:00 by maykman          ###   ########.fr       */
+/*   Updated: 2022/05/29 04:25:45 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	check_base(char *base)
 	return (i);
 }
 
-void	ft_putnbr_base(int n, char *base, int fd)
+void	ft_putnbr_base_fd(int n, char *base, int fd)
 {
 	unsigned int	un;
 	size_t			base_len;
@@ -42,6 +42,6 @@ void	ft_putnbr_base(int n, char *base, int fd)
 		un = -n;
 	}
 	if (un >= base_len)
-		ft_putnbr_base(un / base_len, base, fd);
+		ft_putnbr_base_fd(un / base_len, base, fd);
 	ft_putchar_fd(base[un % base_len], fd);
 }

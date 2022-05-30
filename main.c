@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/20 07:11:51 by mykman           ###   ########.fr       */
+/*   Updated: 2022/05/29 04:29:25 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
-	ft_printf("%d\n", ft_strendwith("Bonjour.exe", "exe"));
+	ft_putnbr_base_fd(5651321, "", 1);
+	ft_putendl_fd("", 1);
 	return (0);
 }
