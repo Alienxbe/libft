@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2022/05/06 23:16:34 by maykman          ###   ########.fr       */
+/*   Updated: 2022/06/08 13:39:44 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,15 @@
 # define BASE_HEXA_L		"0123456789abcdef"
 # define BASE_HEXA_U		"0123456789ABCDEF"
 
-int	ft_pow(int n, int pow);
+int		ft_pow(int n, int pow);
 
-int	*ft_max(int *tab, int length);
-int	*ft_min(int *tab, int length);
+int		*ft_max(int *tab, int length);
+int		*ft_min(int *tab, int length);
 
-int	ft_cmp_bn(const char *n1, const char *n2);
+int		ft_cmp_bn(const char *n1, const char *n2);
+
+int		ft_rand(int max);
+int		ft_randint(int min, int max);
+void	ft_randinit(void);
 
 #endif

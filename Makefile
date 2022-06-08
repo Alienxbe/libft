@@ -75,7 +75,10 @@ SRCS_LIST		:=	ft_lstadd_back.c \
 SRCS_MATH		:=	ft_cmp_bn.c \
 					ft_pow.c \
 					ft_max.c \
-					ft_min.c
+					ft_min.c \
+					ft_rand.c \
+					ft_randint.c \
+					ft_randinit.c
 SRCS_MEMORY		:=	ft_bzero.c \
 					ft_calloc.c \
 					ft_memccpy.c \
