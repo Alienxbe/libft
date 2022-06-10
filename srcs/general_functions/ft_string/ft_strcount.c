@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/10 09:32:19 by mykman           ###   ########.fr       */
+/*   Created: 2022/06/10 09:31:30 by mykman            #+#    #+#             */
+/*   Updated: 2022/06/10 09:32:03 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-
-int	main(void)
+int	ft_strcount(const char *s, char c)
 {
-	ft_printf("%d\n", ft_strcount(",S:	59, 6, 3, 3, 1,", ','));
-	return (0);
+	int	count;
+
+	count = 0;
+	while (*s)
+		if (*s++ == c)
+			count++;
+	return (count);
 }
