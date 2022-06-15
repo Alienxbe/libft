@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/30 17:55:46 by mykman           ###   ########.fr       */
+/*   Updated: 2022/06/01 19:49:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,15 @@
 
 int	main(void)
 {
-	ft_putnbr_base_fd(5651321, "", 1);
-	ft_putendl_fd("", 1);
+	int	fd;
+	char	*line;
+
+	fd = open("test.txt", O_RDONLY);
+	line = NULL;
+	get_next_line(fd, &line);
+	printf("%s\n", line);
+	get_next_line(fd, &line);
+	printf("%s\n", line);
+	close(fd);
 	return (0);
 }
