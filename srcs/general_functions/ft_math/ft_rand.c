@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rand.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/15 16:21:50 by mykman           ###   ########.fr       */
+/*   Created: 2022/06/08 13:37:41 by mykman            #+#    #+#             */
+/*   Updated: 2022/06/08 13:39:23 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	main(void)
+/*
+* Should be initalised with `ft_randinit`
+* return a number between `0` and `max` (not included)
+*/
+int	ft_rand(int max)
 {
-	int	fd;
-	char	*line;
-
-	fd = open("test.txt", O_RDONLY);
-	line = NULL;
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	close(fd);
-	return (0);
+	return (rand() % max);
 }

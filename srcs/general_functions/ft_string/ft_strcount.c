@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/15 16:21:50 by mykman           ###   ########.fr       */
+/*   Created: 2022/06/10 09:31:30 by mykman            #+#    #+#             */
+/*   Updated: 2022/06/10 09:32:03 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-
-int	main(void)
+int	ft_strcount(const char *s, char c)
 {
-	int	fd;
-	char	*line;
+	int	count;
 
-	fd = open("test.txt", O_RDONLY);
-	line = NULL;
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	close(fd);
-	return (0);
+	count = 0;
+	while (*s)
+		if (*s++ == c)
+			count++;
+	return (count);
 }

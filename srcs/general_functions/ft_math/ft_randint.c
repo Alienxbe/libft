@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_randint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/15 16:21:50 by mykman           ###   ########.fr       */
+/*   Created: 2022/06/08 13:25:17 by mykman            #+#    #+#             */
+/*   Updated: 2022/06/08 13:45:27 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	main(void)
+/*
+** Should be initalised with `ft_randinit()`
+*/
+int	ft_randint(int min, int max)
 {
-	int	fd;
-	char	*line;
-
-	fd = open("test.txt", O_RDONLY);
-	line = NULL;
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	close(fd);
-	return (0);
+	if (max <= min || max - min > RAND_MAX)
+		return (min);
+	return (ft_rand(max - min) + min);
 }

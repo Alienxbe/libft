@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:46:33 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 23:49:29 by maykman          ###   ########.fr       */
+/*   Updated: 2022/06/08 13:23:11 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <limits.h>
+# include <time.h>
 # include <fcntl.h>
 # include <sys/types.h>
 # include <sys/uio.h>
