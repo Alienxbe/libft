@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:21:24 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/10 09:32:19 by mykman           ###   ########.fr       */
+/*   Updated: 2022/06/19 03:44:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int	main(void)
 {
-	ft_printf("%d\n", ft_strcount(",S:	59, 6, 3, 3, 1,", ','));
+	char	*str = NULL;
+	char	*cpy;
+
+	cpy = ft_strdup(str);
+	ft_printf("%s\n", cpy);
 	return (0);
 }
