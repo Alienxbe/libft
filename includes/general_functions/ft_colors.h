@@ -6,12 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 14:24:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/21 16:21:52 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:44:33 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLORS_H
-# define COLORS_H
+#ifndef FT_COLORS_H
+# define FT_COLORS_H
 
 # define FT_BLACK		"\e[38;5;8m"
 # define FT_RED			"\e[38;5;9m"
