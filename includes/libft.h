@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:46:33 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/08 13:23:11 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/21 15:29:35 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
+# include "general_functions/ft_colors.h"
 # include "general_functions/ft_ctype.h"
 # include "general_functions/ft_list.h"
 # include "general_functions/ft_dlist.h"
