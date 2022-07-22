@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 00:34:22 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/22 15:13:54 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/22 15:18:39 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	stock_next_line(char **saved, char **line, int bytes)
 		*saved = ft_strdiv(*saved, eol + 1, ft_strlen(*saved) - eol);
 }
 
-char	*gnl_strjoin(char *s1, char *s2)
+static char	*gnl_strjoin(char *s1, char *s2)
 {
 	int		size;
 	char	*ptr;
