@@ -31,6 +31,10 @@ NAME_STD		:=	${FT_STD}.a
 NAME_PRINTF		:=	${FT_PRINTF}.a
 NAME_GNL		:=	${FT_GNL}.a
 
+INCLUDES		:=	-I./includes/ \
+					-I./includes/ft_printf/ \
+					-I./includes/get_next_line/
+
 FOLDER_STD		:=	srcs/general_functions/
 FOLDER_GNL		:=	srcs/get_next_line/
 FOLDER_PRINTF	:=	srcs/ft_printf/
@@ -158,7 +162,7 @@ OBJS			:=	${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
 
 # RULES
 %.o:			%.c
-	${CC} ${CFLAGS} -c -I./includes $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -c ${INCLUDES} $< -o ${<:.c=.o}
 	@echo "${PREFIX}Compilation of $<..."
 
 $(NAME):		${OBJS}
