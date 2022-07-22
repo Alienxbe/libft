@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_type_d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 23:06:47 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:00:08 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static const char	*get_prefix(int n, int flags)
 {

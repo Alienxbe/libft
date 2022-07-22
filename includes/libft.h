@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:46:33 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/21 15:29:35 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/22 14:57:48 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,15 @@
 # include "general_functions/ft_stdio.h"
 # include "general_functions/ft_string.h"
 
-# include "get_next_line/get_next_line.h"
-# include "ft_printf/ft_printf.h"
+/*
+** ft_printf
+*/
+int	ft_printf(const char *format, ...);
+int	ft_fprintf(int fd, const char *format, ...);
+
+/*
+** get_next_line
+*/
+int	get_next_line(int fd, char **line);
 
 #endif

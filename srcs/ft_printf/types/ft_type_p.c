@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_type_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 01:50:12 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:46:04 by maykman          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:00:05 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_type_p(t_tag tag, va_list args)
 {

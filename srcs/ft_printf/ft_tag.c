@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:53:24 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/20 07:09:35 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/22 15:00:37 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_getflags(const char **format)
 {
