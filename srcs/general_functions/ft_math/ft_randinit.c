@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:27:48 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/08 13:28:20 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:00:05 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <time.h>
 
 void	ft_randinit(void)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:33:51 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 02:03:46 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:04:41 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

@@ -6,11 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 16:57:38 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/20 14:56:41 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:13:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_string.h"
+#include "ft_stdio.h"
 
 static int	check_base(char *base)
 {

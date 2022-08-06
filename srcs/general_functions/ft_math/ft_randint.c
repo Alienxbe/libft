@@ -6,15 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:25:17 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/08 13:45:27 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:00:09 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_math.h"
 
-/*
-** Should be initalised with `ft_randinit()`
-*/
 int	ft_randint(int min, int max)
 {
 	if (max <= min || max - min > RAND_MAX)

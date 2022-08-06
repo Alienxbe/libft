@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:19:53 by mykman            #+#    #+#             */
-/*   Updated: 2022/06/19 03:43:27 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:23:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 char	*ft_strdup(const char *s)
 {

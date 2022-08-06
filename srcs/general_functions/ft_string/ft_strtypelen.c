@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtypelen.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 18:25:36 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:20:33 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:29:16 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_ctype.h"
 
 size_t	ft_strtypelen(const char *s, int (*istype)(int))
 {

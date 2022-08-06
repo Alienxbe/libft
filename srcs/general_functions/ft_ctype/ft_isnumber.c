@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:46:45 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/03 15:29:56 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:43:55 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
 
 int	ft_isnumber(char *str)
 {

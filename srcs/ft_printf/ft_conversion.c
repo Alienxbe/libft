@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:52:38 by maykman           #+#    #+#             */
-/*   Updated: 2022/07/22 15:00:31 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:22:43 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "__ft_printf__.h"
 
 void	ft_init_table(t_print *table)
 {

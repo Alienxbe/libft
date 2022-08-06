@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 09:50:15 by mykman            #+#    #+#             */
-/*   Updated: 2020/11/20 15:47:47 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:01:52 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 void	ft_bzero(void *s, size_t n)
 {

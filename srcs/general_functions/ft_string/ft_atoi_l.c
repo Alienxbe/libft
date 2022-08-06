@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_l.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 23:44:46 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/26 23:44:55 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:18:16 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <limits.h>
+#include "ft_ctype.h"
 
 int	ft_atoi_l(const char *str, int max_len)
 {

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:45:37 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:40:15 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:30:25 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

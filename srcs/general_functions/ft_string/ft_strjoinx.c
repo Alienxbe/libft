@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoinx.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:27:19 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 23:57:47 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:26:13 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include "ft_string.h"
 
 char	*ft_strjoinx(int n, ...)
 {

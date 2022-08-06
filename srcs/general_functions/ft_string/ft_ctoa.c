@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ctoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 21:05:23 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:02:28 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:19:02 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 char	*ft_ctoa(char c)
 {

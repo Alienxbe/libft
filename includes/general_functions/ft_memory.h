@@ -6,12 +6,14 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:08:16 by anonymou          #+#    #+#             */
-/*   Updated: 2022/06/19 03:39:35 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:51:37 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MEMORY_H
 # define FT_MEMORY_H
+
+# include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void	*dst, const void *src, size_t n);

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable_fd.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 00:44:50 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/22 01:34:42 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:21:54 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
+#include "ft_math.h"
+#include "ft_stdio.h"
 
 void	ft_putstr_non_printable_fd(const char *s, int fd)
 {

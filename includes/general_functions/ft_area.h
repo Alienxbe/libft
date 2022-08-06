@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_area.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 08:32:10 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/06 23:03:22 by mykman           ###   ########.fr       */
+/*   Created: 2022/08/06 19:30:19 by mykman            #+#    #+#             */
+/*   Updated: 2022/08/06 19:56:19 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef FT_AREA_H
+# define FT_AREA_H
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+# include "ft_point.h"
+
+typedef struct s_area
 {
-	size_t	i;
+	t_point	p1;
+	t_point	p2;
+}	t_area;
 
-	i = -1;
-	if (s1 && s2)
-		while (++i < n)
-			if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-				return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-	return (0);
-}
+t_area	new_area(int x1, int y1, int x2, int y2);
+t_area	point_to_area(t_point p1, t_point p2);
+
+#endif

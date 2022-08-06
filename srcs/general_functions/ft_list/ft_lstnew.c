@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:43:11 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/16 19:34:17 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 22:53:43 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_list.h"
 
 t_list	*ft_lstnew(void *content)
 {

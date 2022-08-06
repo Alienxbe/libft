@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:20:54 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 22:39:57 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:28:11 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

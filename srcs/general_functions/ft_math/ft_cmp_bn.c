@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cmp_bn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 18:53:58 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:16:11 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:01:13 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_ctype.h"
+#include "ft_string.h"
 
 int	ft_cmp_bn(const char *n1, const char *n2)
 {

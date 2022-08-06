@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 13:26:55 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 23:30:26 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:20:51 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 char	*ft_itoa(int n)
 {

@@ -42,7 +42,6 @@ FOLDER_GNL		:=	srcs/get_next_line/
 FOLDER_PRINTF	:=	srcs/ft_printf/
 
 # FILES
-
 SRCS_COLORS		:=	ft_rgb.c
 SRCS_CTYPE		:=	ft_isalnum.c \
 					ft_isalpha.c \

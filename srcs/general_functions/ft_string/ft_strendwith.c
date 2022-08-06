@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 06:29:00 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/20 06:36:58 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:23:33 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 int	ft_strendwith(const char *str, const char *suffix)
 {

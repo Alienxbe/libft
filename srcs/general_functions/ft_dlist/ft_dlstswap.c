@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 00:57:28 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/01 15:50:19 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:50:41 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_dlist.h"
 
 t_dlist	*ft_dlstswap(t_dlist *elem1, t_dlist *elem2)
 {

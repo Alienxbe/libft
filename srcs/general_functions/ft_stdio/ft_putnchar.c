@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 20:47:39 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 23:17:54 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:12:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdio.h"
 
 int	ft_putnchar(char c, int n, int fd)
 {

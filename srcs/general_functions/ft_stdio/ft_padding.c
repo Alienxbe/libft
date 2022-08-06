@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_padding.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 20:00:02 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 00:56:12 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:14:34 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_padding(const char c, int n)
 {
 	while (n-- > 0)
-		ft_putchar_fd(c, 1);
+		write(STDOUT_FILENO, &c, 1);
 }

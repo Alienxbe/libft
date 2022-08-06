@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 19:52:27 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:06:57 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:19:50 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_intsize(long n)
 {

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:41:16 by mykman            #+#    #+#             */
-/*   Updated: 2022/05/06 01:11:16 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:22:10 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_memory.h"
+#include "ft_string.h"
 
 static size_t	ft_strclen(char const *s, char c)
 {

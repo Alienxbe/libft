@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:41:29 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/05 23:42:03 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:06:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_point.h"
 
 t_point	new_point(int x, int y)
 {

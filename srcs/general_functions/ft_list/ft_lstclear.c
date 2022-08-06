@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:16:30 by mykman            #+#    #+#             */
-/*   Updated: 2020/12/27 20:32:25 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:52:39 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

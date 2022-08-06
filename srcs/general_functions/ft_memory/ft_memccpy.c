@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:41:31 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 21:53:15 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:02:37 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

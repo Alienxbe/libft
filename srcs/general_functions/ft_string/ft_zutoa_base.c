@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 00:30:23 by maykman           #+#    #+#             */
-/*   Updated: 2022/06/20 14:59:09 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:30:46 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 static size_t	ft_usize_base(size_t n, size_t base_len)
 {

@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 17:43:17 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/05 23:44:41 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:06:13 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
+#include "ft_point.h"
 
 void	ft_print_point(t_point p)
 {

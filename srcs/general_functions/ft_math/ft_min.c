@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:47:56 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 21:52:05 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 23:00:00 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	*ft_min(int *tab, int length)
 {

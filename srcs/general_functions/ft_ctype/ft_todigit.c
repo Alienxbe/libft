@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_todigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 02:06:57 by maykman           #+#    #+#             */
-/*   Updated: 2022/05/06 02:07:39 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 22:44:02 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
 
 int	ft_todigit(int c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:51:11 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 21:52:11 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 22:59:54 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	*ft_max(int *tab, int length)
 {

@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 00:34:22 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/22 15:18:39 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:33:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "__get_next_line__.h"
 
 static int	free_return(char **str, int ret_value)
 {
@@ -49,13 +49,6 @@ static char	*gnl_strjoin(char *s1, char *s2)
 	return (ptr);
 }
 
-/**
- * @brief Read the next line on a file descriptor
- *
- * @param fd
- * @param line: The address where the line is stored
- * @return int
- */
 int	get_next_line(int fd, char **line)
 {
 	static char	*saved[FOPEN_MAX];

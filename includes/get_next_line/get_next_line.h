@@ -6,25 +6,20 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 12:01:55 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/22 15:18:36 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:33:07 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "libft.h"
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE			1
-# endif
-
-# define FILE_NOT_FOUND_ERROR	-2
-
-/*
-** --- Main ---
-*/
-
-int		get_next_line(int fd, char **line);
+/**
+ * @brief Read the next line on a file descriptor
+ *
+ * @param fd
+ * @param line: The address where the line is stored
+ * @return int
+ */
+int	get_next_line(int fd, char **line);
 
 #endif

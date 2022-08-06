@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:44:59 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/05 23:58:54 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:05:58 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_point.h"
 
 t_point	ft_pos_cmp(t_point p1, t_point p2)
 {

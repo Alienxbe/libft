@@ -6,11 +6,12 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:47:40 by mykman            #+#    #+#             */
-/*   Updated: 2021/03/22 20:12:17 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:26:48 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
+#include "ft_string.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

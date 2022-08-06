@@ -6,11 +6,11 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 22:15:27 by maykman           #+#    #+#             */
-/*   Updated: 2022/07/22 15:00:34 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:26:40 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "__ft_printf__.h"
 
 static int	ft_checkformat(int fd, const char *format)
 {
@@ -50,14 +50,6 @@ static int	ft_printf_main(int fd, const char *format, va_list args)
 	return (len);
 }
 
-/**
- * @brief Work the same as printf original function
- * 
- * @param fd: The file descriptor where the function will print
- * @param format: Main string wich can have conversion
- * @param ...: All conversion values
- * @return int: The number of character written to the FD
- */
 int	ft_fprintf(int fd, const char *format, ...)
 {
 	va_list	args;
@@ -69,13 +61,6 @@ int	ft_fprintf(int fd, const char *format, ...)
 	return (len);
 }
 
-/**
- * @brief Work the same as printf original function
- *
- * @param format: Main string wich can have conversion
- * @param ...: All conversion values
- * @return int: The number of character written to STDOUT
- */
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;

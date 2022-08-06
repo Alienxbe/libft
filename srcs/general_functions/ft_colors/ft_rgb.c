@@ -6,19 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 15:16:40 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/21 18:44:50 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 22:43:10 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_string.h"
 
-/*
-* Malloc a string in format : `/e[38;2; <r> ; <g> ; <b> m`
-* wich is used by terminal to change the text color.
-* Works better in I-term
-
-* Parameters are coded on 8 bits
-*/
 char	*ft_rgb(unsigned char r, unsigned char g, unsigned char b)
 {
 	char	*str;

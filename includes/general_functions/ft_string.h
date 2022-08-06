@@ -6,12 +6,14 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2022/06/10 09:32:51 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/06 23:20:09 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
+
+# include <stddef.h>
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdiv(char *s, int start, int len);

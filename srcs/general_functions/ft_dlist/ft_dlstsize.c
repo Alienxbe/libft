@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maykman <maykman@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:09 by mykman            #+#    #+#             */
-/*   Updated: 2022/04/17 21:48:55 by maykman          ###   ########.fr       */
+/*   Updated: 2022/08/06 22:50:18 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_dlist.h"
 
 int	ft_dlstsize(t_dlist *lst, t_dlist *toward)
 {
