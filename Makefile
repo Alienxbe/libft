@@ -32,8 +32,10 @@ NAME_PRINTF		:=	${FT_PRINTF}.a
 NAME_GNL		:=	${FT_GNL}.a
 
 INCLUDES		:=	-I./includes/ \
+					-I./includes/general_functions \
 					-I./includes/ft_printf/ \
 					-I./includes/get_next_line/
+
 
 FOLDER_STD		:=	srcs/general_functions/
 FOLDER_GNL		:=	srcs/get_next_line/
@@ -94,6 +96,9 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memmove.c \
 					ft_memset.c \
 					ft_ternary.c
+SRCS_POINT		:=	cmp_point.c \
+					new_point.c \
+					print_point.c
 SRCS_STDIO		:=	ft_padding.c \
 					ft_print_memory_fd.c \
 					ft_putchar_fd.c \
@@ -153,6 +158,7 @@ OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_dlist/, ${SRCS_DLIST:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_list/, ${SRCS_LIST:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_math/, ${SRCS_MATH:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_memory/, ${SRCS_MEMORY:.c=.o})
+OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_point/, ${SRCS_POINT:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_stdio/, ${SRCS_STDIO:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_string/, ${SRCS_STRING:.c=.o})
 OBJS_PRINTF		:=	$(addprefix ${FOLDER_PRINTF}, ${SRCS_PRINTF:.c=.o})
@@ -181,12 +187,11 @@ libftgnl:
 	@make all -s FT=${FT_GNL} OBJS="${OBJS_STD} ${OBJS_GNL}"
 
 clean:
-	@rm -f ${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
+	@rm -f ${OBJS}
 	@echo "${PREFIX}${BLUE}Cleaning object files...${RESET}"
 
 fclean:
-	@rm -f ${NAME} ${NAME_STD} ${NAME_PRINTF} ${NAME_GNL}\
-				${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
+	@rm -f ${NAME} ${NAME_STD} ${NAME_PRINTF} ${NAME_GNL} ${OBJS}
 	@echo "${PREFIX}${RED}Full clean.${RESET}"
 
 re:				fclean all
