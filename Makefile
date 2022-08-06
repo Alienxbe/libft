@@ -42,6 +42,8 @@ FOLDER_GNL		:=	srcs/get_next_line/
 FOLDER_PRINTF	:=	srcs/ft_printf/
 
 # FILES
+SRCS_AREA		:=	pos_to_area.c \
+					point_to_area.c
 SRCS_COLORS		:=	ft_rgb.c
 SRCS_CTYPE		:=	ft_isalnum.c \
 					ft_isalpha.c \
@@ -151,7 +153,8 @@ SRCS_TYPEPRINTF	:=	ft_print.c \
 					ft_type_ux.c
 SRCS_GNL		:=	get_next_line.c
 
-OBJS_STD		:=	$(addprefix ${FOLDER_STD}ft_colors/, ${SRCS_COLORS:.c=.o})
+OBJS_STD		:=	$(addprefix ${FOLDER_STD}ft_area/, ${SRCS_AREA:.c=.o})
+OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_colors/, ${SRCS_COLORS:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_ctype/, ${SRCS_CTYPE:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_dlist/, ${SRCS_DLIST:.c=.o})
 OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_list/, ${SRCS_LIST:.c=.o})
