@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmp_point.c                                        :+:      :+:    :+:   */
+/*   add_point.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 23:44:59 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/06 23:05:58 by mykman           ###   ########.fr       */
+/*   Created: 2022/08/07 22:02:02 by mykman            #+#    #+#             */
+/*   Updated: 2022/08/07 22:03:20 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_point.h"
 
-t_point	ft_pos_cmp(t_point p1, t_point p2)
+t_point	add_point(t_point p1, t_point p2)
 {
-	return ((t_point){p2.x - p1.x, p2.y - p1.y});
+	return ((t_point){p1.x + p2.x, p1.y + p2.y});
 }

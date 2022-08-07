@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   sub_point.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 17:38:56 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/07 22:05:17 by mykman           ###   ########.fr       */
+/*   Created: 2022/08/05 23:44:59 by mykman            #+#    #+#             */
+/*   Updated: 2022/08/07 22:04:34 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include "ft_point.h"
 
-typedef struct s_point
+t_point	sub_point(t_point p1, t_point p2)
 {
-	int	x;
-	int	y;
-}	t_point;
-
-t_point	new_point(int x, int y);
-t_point	add_point(t_point p1, t_point p2);
-t_point	sub_point(t_point p1, t_point p2);
-void	print_point(t_point p);
-
-#endif
+	return ((t_point){p1.x - p2.x, p1.y - p2.y});
+}

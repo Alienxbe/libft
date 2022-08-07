@@ -97,9 +97,10 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memmove.c \
 					ft_memset.c \
 					ft_ternary.c
-SRCS_POINT		:=	cmp_point.c \
+SRCS_POINT		:=	add_point.c \
 					new_point.c \
-					print_point.c
+					print_point.c \
+					sub_point.c
 SRCS_STDIO		:=	ft_padding.c \
 					ft_print_memory_fd.c \
 					ft_putchar_fd.c \
