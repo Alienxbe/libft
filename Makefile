@@ -98,6 +98,8 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memset.c \
 					ft_ternary.c
 SRCS_POINT		:=	add_point.c \
+					isbigger_point.c \
+					issmaller_point.c \
 					new_point.c \
 					print_point.c \
 					sub_point.c
