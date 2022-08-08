@@ -6,13 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:03:37 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/08 23:52:11 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/09 00:25:11 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+t_bool	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (!alst || !new)
 		return (false);
