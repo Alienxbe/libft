@@ -6,13 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:05:11 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/06 22:43:39 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:32:29 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ctype.h"
 
-int	ft_isalnum(int c)
+t_bool	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

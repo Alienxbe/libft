@@ -6,11 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:12:45 by mykman            #+#    #+#             */
-/*   Updated: 2020/12/27 17:08:32 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:20:27 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "ft_bool.h"
+
+t_bool	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_bool.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 16:34:45 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/08 23:53:50 by mykman           ###   ########.fr       */
+/*   Created: 2022/08/08 22:58:20 by mykman            #+#    #+#             */
+/*   Updated: 2022/08/08 23:05:49 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#ifndef FT_BOOL_H
+# define FT_BOOL_H
 
-t_bool	ft_lstiter(t_list *lst, void (*f)(void *))
+typedef unsigned char	t_bool;
+
+typedef enum e_boolean
 {
-	if (!f)
-		return (false);
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
-	return (true);
-}
+	false,
+	true
+}	t_boolean;
+
+#endif

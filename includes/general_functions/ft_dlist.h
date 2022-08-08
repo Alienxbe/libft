@@ -6,12 +6,14 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 23:19:05 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/08 15:09:32 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:48:00 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_DLIST_H
 # define FT_DLIST_H
+
+# include "ft_bool.h"
 
 typedef struct s_dlist
 {
@@ -36,9 +38,9 @@ t_dlist	*ft_dlstswap(t_dlist *elem1, t_dlist *elem2);
 int		ft_dlstsize(t_dlist *lst, t_dlist *toward);
 
 void	ft_dlstadd(t_dlist *new, t_dlist *previous, t_dlist *next);
-void	ft_dlstadd_front(t_dlist **alst, t_dlist *new);
-void	ft_dlstadd_back(t_dlist **alst, t_dlist *new);
-void	ft_dlstiter(t_dlist *lst, void (*f)(void *));
+t_bool	ft_dlstadd_front(t_dlist **alst, t_dlist *new);
+t_bool	ft_dlstadd_back(t_dlist **alst, t_dlist *new);
+t_bool	ft_dlstiter(t_dlist *lst, void (*f)(void *));
 void	ft_dlstdelone(t_dlist *lst, void (*del)(void *));
 void	ft_dlstclear(t_dlist **lst, void (*del)(void *));
 

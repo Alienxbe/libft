@@ -36,7 +36,6 @@ INCLUDES		:=	-I./includes/ \
 					-I./includes/ft_printf/ \
 					-I./includes/get_next_line/
 
-
 FOLDER_STD		:=	srcs/general_functions/
 FOLDER_GNL		:=	srcs/get_next_line/
 FOLDER_PRINTF	:=	srcs/ft_printf/

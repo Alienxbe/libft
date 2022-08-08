@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   isequal_point.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 16:34:45 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/08 23:53:50 by mykman           ###   ########.fr       */
+/*   Created: 2022/08/08 22:56:43 by mykman            #+#    #+#             */
+/*   Updated: 2022/08/08 23:16:01 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "ft_bool.h"
+#include "ft_point.h"
 
-t_bool	ft_lstiter(t_list *lst, void (*f)(void *))
+t_bool	issmaller_point(t_point p1, t_point p2)
 {
-	if (!f)
-		return (false);
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
-	return (true);
+	return (p1.x == p2.x && p1.y == p2.y);
 }

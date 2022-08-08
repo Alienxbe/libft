@@ -6,13 +6,14 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 23:17:25 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/07 23:19:10 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:15:43 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_bool.h"
 #include "ft_point.h"
 
-int	issmaller_point(t_point p1, t_point p2)
+t_bool	issmaller_point(t_point p1, t_point p2)
 {
 	return (p1.x < p2.x && p1.y < p2.y);
 }

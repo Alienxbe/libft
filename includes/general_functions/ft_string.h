@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2022/08/06 23:20:09 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/09 00:08:19 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STRING_H
 
 # include <stddef.h>
+# include "ft_bool.h"
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdiv(char *s, int start, int len);
@@ -40,8 +41,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_atoi_l(const char *str, int max_len);
 int		ft_strcount(const char *s, char c);
-int		ft_strstartwith(const char *str, const char *prefix);
-int		ft_strendwith(const char *str, const char *suffix);
+t_bool	ft_strstartwith(const char *str, const char *prefix);
+t_bool	ft_strendwith(const char *str, const char *suffix);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

@@ -6,11 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 23:31:54 by mykman            #+#    #+#             */
-/*   Updated: 2021/11/07 23:44:28 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:24:55 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
+#include "ft_bool.h"
+
+t_bool	ft_isspace(int c)
 {
 	return (c >= 9 && c <= 13);
 }

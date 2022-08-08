@@ -6,11 +6,13 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:10:26 by mykman            #+#    #+#             */
-/*   Updated: 2020/12/27 17:08:44 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:32:38 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "ft_bool.h"
+
+t_bool	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

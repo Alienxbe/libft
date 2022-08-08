@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:03:37 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/06 22:52:36 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:52:11 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (!alst || !new)
-		return ;
+		return (false);
 	new->next = *alst;
 	*alst = new;
+	return (true);
 }
