@@ -41,7 +41,9 @@ FOLDER_GNL		:=	srcs/get_next_line/
 FOLDER_PRINTF	:=	srcs/ft_printf/
 
 # FILES
-SRCS_AREA		:=	pos_to_area.c \
+SRCS_AREA		:=	get_size_area.c \
+					is_point_in_area.c \
+					pos_to_area.c \
 					point_to_area.c
 SRCS_COLORS		:=	ft_rgb.c
 SRCS_CTYPE		:=	ft_isalnum.c \
