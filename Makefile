@@ -23,22 +23,12 @@ PREFIX			=	[${YELLOW}${FT}${RESET}]\t\t
 
 # VARIABLES
 FT				:=	libft
-FT_STD			:=	libftstd
-FT_PRINTF		:=	libftprintf
-FT_GNL			:=	libftgnl
 NAME			:=	${FT}.a
-NAME_STD		:=	${FT_STD}.a
-NAME_PRINTF		:=	${FT_PRINTF}.a
-NAME_GNL		:=	${FT_GNL}.a
+SRCS_PATH		:=	srcs
+OBJS_PATH		:=	objs
 
-INCLUDES		:=	-I./includes/ \
-					-I./includes/general_functions \
-					-I./includes/ft_printf/ \
-					-I./includes/get_next_line/
-
-FOLDER_STD		:=	srcs/general_functions/
-FOLDER_GNL		:=	srcs/get_next_line/
-FOLDER_PRINTF	:=	srcs/ft_printf/
+INCLUDES		:=	-I./includes \
+					-I./includes/private \
 
 # FILES
 SRCS_AREA		:=	area_to_size.c \
@@ -159,40 +149,33 @@ SRCS_TYPEPRINTF	:=	ft_print.c \
 					ft_type_ux.c
 SRCS_GNL		:=	get_next_line.c
 
-OBJS_STD		:=	$(addprefix ${FOLDER_STD}ft_area/, ${SRCS_AREA:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_colors/, ${SRCS_COLORS:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_ctype/, ${SRCS_CTYPE:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_dlist/, ${SRCS_DLIST:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_list/, ${SRCS_LIST:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_math/, ${SRCS_MATH:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_memory/, ${SRCS_MEMORY:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_point/, ${SRCS_POINT:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_stdio/, ${SRCS_STDIO:.c=.o})
-OBJS_STD		+=	$(addprefix ${FOLDER_STD}ft_string/, ${SRCS_STRING:.c=.o})
-OBJS_PRINTF		:=	$(addprefix ${FOLDER_PRINTF}, ${SRCS_PRINTF:.c=.o})
-OBJS_PRINTF		+=	$(addprefix ${FOLDER_PRINTF}types/, ${SRCS_TYPEPRINTF:.c=.o})
-OBJS_GNL		:=	$(addprefix ${FOLDER_GNL}, ${SRCS_GNL:.c=.o})
-OBJS			:=	${OBJS_STD} ${OBJS_PRINTF} ${OBJS_GNL}
+SRCS			:=	$(addprefix ${SRCS_PATH}/ft_area/, ${SRCS_AREA:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_ctype/, ${SRCS_CTYPE:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_colors/, ${SRCS_COLORS:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_dlist/, ${SRCS_DLIST:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_list/, ${SRCS_LIST:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_math/, ${SRCS_MATH:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_memory/, ${SRCS_MEMORY:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_point/, ${SRCS_POINT:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_stdio/, ${SRCS_STDIO:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_string/, ${SRCS_STRING:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/, ${SRCS_PRINTF:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/types/, ${SRCS_TYPEPRINTF:.c=.o})
+SRCS			+=	$(addprefix ${SRCS_PATH}/get_next_line/, ${SRCS_GNL:.c=.o})
+OBJS			:=	$(patsubst srcs%.c, objs%.o, ${SRCS})
 
 # RULES
-%.o:			%.c
-	${CC} ${CFLAGS} -c ${INCLUDES} $< -o ${<:.c=.o}
-	@echo "${PREFIX}Compilation of $<..."
 
 $(NAME):		${OBJS}
 	@ar -rcs $@ $^
 	@echo "${PREFIX}${GREEN}Library created !${RESET}"
+	@echo "${OBJS}"
 
-all:			${NAME}
+all:				${NAME}
 
-libftstd:
-	@make all -s FT=${FT_STD} OBJS=${OBJS_STD}
-
-libftprintf:
-	@make all -s FT=${FT_PRINTF} OBJS="${OBJS_STD} ${OBJS_PRINTF}"
-
-libftgnl:
-	@make all -s FT=${FT_GNL} OBJS="${OBJS_STD} ${OBJS_GNL}"
+objs/%.o:	srcs/%.c
+	${CC} ${CFLAGS} -c ${INCLUDES} $^ -o $@
+	@echo "${PREFIX}Compilation of $<..."
 
 clean:
 	@rm -f ${OBJS}
@@ -202,6 +185,6 @@ fclean:
 	@rm -f ${NAME} ${NAME_STD} ${NAME_PRINTF} ${NAME_GNL} ${OBJS}
 	@echo "${PREFIX}${RED}Full clean.${RESET}"
 
-re:				fclean all
+re:					fclean all
 
-.PHONY:			all clean fclean re libftstd libftprintf libftgnl
+.PHONY:				all clean fclean re
