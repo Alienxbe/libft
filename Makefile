@@ -149,33 +149,31 @@ SRCS_TYPEPRINTF	:=	ft_print.c \
 					ft_type_ux.c
 SRCS_GNL		:=	get_next_line.c
 
-SRCS			:=	$(addprefix ${SRCS_PATH}/ft_area/, ${SRCS_AREA:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_ctype/, ${SRCS_CTYPE:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_colors/, ${SRCS_COLORS:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_dlist/, ${SRCS_DLIST:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_list/, ${SRCS_LIST:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_math/, ${SRCS_MATH:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_memory/, ${SRCS_MEMORY:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_point/, ${SRCS_POINT:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_stdio/, ${SRCS_STDIO:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_string/, ${SRCS_STRING:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/, ${SRCS_PRINTF:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/types/, ${SRCS_TYPEPRINTF:.c=.o})
-SRCS			+=	$(addprefix ${SRCS_PATH}/get_next_line/, ${SRCS_GNL:.c=.o})
+SRCS			:=	$(addprefix ${SRCS_PATH}/ft_area/, ${SRCS_AREA})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_ctype/, ${SRCS_CTYPE})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_colors/, ${SRCS_COLORS})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_dlist/, ${SRCS_DLIST})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_list/, ${SRCS_LIST})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_math/, ${SRCS_MATH})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_memory/, ${SRCS_MEMORY})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_point/, ${SRCS_POINT})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_stdio/, ${SRCS_STDIO})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_string/, ${SRCS_STRING})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/, ${SRCS_PRINTF})
+SRCS			+=	$(addprefix ${SRCS_PATH}/ft_printf/types/, ${SRCS_TYPEPRINTF})
+SRCS			+=	$(addprefix ${SRCS_PATH}/get_next_line/, ${SRCS_GNL})
 OBJS			:=	$(patsubst srcs%.c, objs%.o, ${SRCS})
 
 # RULES
+objs/%.o:	srcs/%.c
+	${CC} ${CFLAGS} -c ${INCLUDES} $< -o $@
+	@echo "${PREFIX}Compilation of $<..."
 
 $(NAME):		${OBJS}
 	@ar -rcs $@ $^
 	@echo "${PREFIX}${GREEN}Library created !${RESET}"
-	@echo "${OBJS}"
 
 all:				${NAME}
-
-objs/%.o:	srcs/%.c
-	${CC} ${CFLAGS} -c ${INCLUDES} $^ -o $@
-	@echo "${PREFIX}Compilation of $<..."
 
 clean:
 	@rm -f ${OBJS}
