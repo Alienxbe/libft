@@ -72,7 +72,9 @@ SRCS_LIST		:=	ft_lstadd_back.c \
 					ft_lstmap.c \
 					ft_lstnew.c \
 					ft_lstsize.c
-SRCS_MATH		:=	ft_cmp_bn.c \
+SRCS_MATH		:=	ft_byte_get.c \
+					ft_byte_repeat.c \
+					ft_cmp_bn.c \
 					ft_pow.c \
 					ft_max.c \
 					ft_min.c \
