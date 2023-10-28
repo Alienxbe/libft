@@ -34,7 +34,6 @@ int		ft_rand(int max);
 int		ft_randint(int min, int max);
 void	ft_randinit(void);
 
-
 /*
 ** Bytes operations
 */
