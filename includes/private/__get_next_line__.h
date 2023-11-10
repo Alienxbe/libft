@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   __get_next_line__.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 22:30:46 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/06 23:38:55 by mykman           ###   ########.fr       */
+/*   Updated: 2023/11/10 16:18:15 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include "ft_string.h"
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE			1
+#  define BUFFER_SIZE			1024
 # endif
 
 # define FILE_NOT_FOUND_ERROR	-2
