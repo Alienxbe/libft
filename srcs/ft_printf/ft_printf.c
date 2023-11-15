@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 22:15:27 by maykman           #+#    #+#             */
-/*   Updated: 2022/08/06 22:26:40 by mykman           ###   ########.fr       */
+/*   Updated: 2023/11/15 19:04:17 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	ft_printf_main(int fd, const char *format, va_list args)
 		ptr = ft_strchr(format, '%');
 	}
 	if (!ptr)
-			len += ft_puts(format, fd);
+		len += ft_puts(format, fd);
 	return (len);
 }
 

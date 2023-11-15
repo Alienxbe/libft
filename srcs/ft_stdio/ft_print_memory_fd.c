@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 01:51:07 by maykman           #+#    #+#             */
-/*   Updated: 2022/08/06 23:17:03 by mykman           ###   ########.fr       */
+/*   Updated: 2023/11/15 19:04:30 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	ft_print_hex(unsigned char *ptr, int size, int i, int fd)
 		if (i + j >= size)
 			ft_putstr_fd("  ", fd);
 		else
-		{	
+		{
 			ft_putchar_fd(BASE_HEXA_L[ptr[i + j] / 16], fd);
 			ft_putchar_fd(BASE_HEXA_L[ptr[i + j] % 16], fd);
 		}
