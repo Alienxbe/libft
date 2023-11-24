@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 15:13:18 by marykman          #+#    #+#             */
-/*   Updated: 2023/11/24 15:14:44 by marykman         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:14:49 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 t_bool	ft_islower(char c)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (c >= 'a' && c <= 'z');
 }
