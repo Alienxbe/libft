@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_l.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 23:44:46 by maykman           #+#    #+#             */
-/*   Updated: 2022/08/06 23:18:16 by mykman           ###   ########.fr       */
+/*   Updated: 2023/11/29 23:55:12 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
+#include <stddef.h>
 #include "ft_ctype.h"
 
-int	ft_atoi_l(const char *str, int max_len)
+int	ft_atoi_l(const char *str, size_t max_len)
 {
 	unsigned long long	n;
 	char				sign;
