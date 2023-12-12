@@ -136,6 +136,7 @@ SRCS_STRING		:=	ft_addprefix.c \
 					ft_strnstr.c \
 					ft_strrchr.c \
 					ft_strstartwith.c \
+					ft_strtol_l.c \
 					ft_strtol.c \
 					ft_strtrim.c \
 					ft_strtypelen.c \

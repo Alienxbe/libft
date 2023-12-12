@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtol.c                                        :+:      :+:    :+:   */
+/*   ft_strtol_l.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 12:23:03 by marykman          #+#    #+#             */
-/*   Updated: 2023/12/12 14:34:41 by marykman         ###   ########.fr       */
+/*   Created: 2023/12/12 14:34:56 by marykman          #+#    #+#             */
+/*   Updated: 2023/12/12 14:36:44 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,11 @@ int	check_base(const char *base)
  * @param str String to be converted
  * @param endptr Stores the address of the first invalid character
  * @param base Used to convert the number
+ * @param max_len Maximum length checked for the number only
  * @return The converted number as a long
  */
-long	ft_strtol(const char *str, char **endptr, const char *base)
+long	ft_strtol_l(const char *str, char **endptr, const char *base,
+	size_t max_len)
 {
 	unsigned long	n;
 	char			sign;
@@ -61,7 +63,7 @@ long	ft_strtol(const char *str, char **endptr, const char *base)
 		if (*str++ == '-')
 			sign = -1;
 	n = 0;
-	while (ft_index(base, *str) >= 0)
+	while (ft_index(base, *str) >= 0 && max_len--)
 		n = n * base_len + ft_index(base, *str++);
 	return (set_endptr(str, endptr, n * sign));
 }
