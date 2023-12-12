@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2022/08/09 00:26:13 by mykman           ###   ########.fr       */
+/*   Updated: 2023/12/12 13:52:16 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int		ft_index(const char *s, char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_atoi_l(const char *str, int max_len);
+long	ft_strtol(const char *str, char **endptr, const char *base);
 int		ft_strcount(const char *s, char c);
 t_bool	ft_strstartwith(const char *str, const char *prefix);
 t_bool	ft_strendwith(const char *str, const char *suffix);
