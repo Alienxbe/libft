@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2023/12/12 14:40:34 by marykman         ###   ########.fr       */
+/*   Updated: 2023/12/22 15:08:01 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_atoi_base(char *str, char *base);
 int		ft_atoi_base_l(char *str, char *base, size_t max_len);
 long	ft_strtol(const char *str, char **endptr, const char *base);
 long	ft_strtol_l(const char *str, char **endptr, const char *base,
-	size_t max_len);
+			size_t max_len);
 int		ft_strcount(const char *s, char c);
 t_bool	ft_strstartwith(const char *str, const char *prefix);
 t_bool	ft_strendwith(const char *str, const char *suffix);

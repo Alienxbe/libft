@@ -94,6 +94,7 @@ SRCS_MEMORY		:=	ft_bzero.c \
 					ft_memset.c \
 					ft_ternary.c
 SRCS_POINT		:=	add_point.c \
+					ft_fpoint_to_point.c \
 					isbigger_point.c \
 					isequal_point.c \
 					issmaller_point.c \
