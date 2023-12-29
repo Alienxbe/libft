@@ -78,11 +78,11 @@ SRCS_MATH		:=	ft_byte_get.c \
 					ft_byte_repeat.c \
 					ft_cmp_bn.c \
 					ft_pow.c \
-					ft_max.c \
-					ft_min.c \
 					ft_rand.c \
 					ft_randint.c \
-					ft_randinit.c
+					ft_randinit.c \
+					ft_tab_int_max.c \
+					ft_tab_int_min.c
 SRCS_MEMORY		:=	ft_bzero.c \
 					ft_calloc.c \
 					ft_memccpy.c \

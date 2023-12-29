@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2022/08/12 00:41:43 by mykman           ###   ########.fr       */
+/*   Updated: 2023/12/29 22:42:10 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 typedef unsigned char	t_byte;
 
 int		ft_pow(int n, int pow);
-int		*ft_max(int *tab, int length);
-int		*ft_min(int *tab, int length);
+int		*ft_tab_int_max(int *tab, int length);
+int		*ft_tab_int_min(int *tab, int length);
 int		ft_cmp_bn(const char *n1, const char *n2);
 /*
 * Should be initalised with `ft_randinit`
