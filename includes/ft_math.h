@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:58 by anonymou          #+#    #+#             */
-/*   Updated: 2023/12/29 22:42:10 by marykman         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:03:43 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 typedef unsigned char	t_byte;
 
 int		ft_pow(int n, int pow);
+int		ft_maxint(int a, int b);
+int		ft_minint(int a, int b);
+int		ft_signint(int a);
+float	ft_maxfloat(float a, float b);
+float	ft_minfloat(float a, float b);
+float	ft_signfloat(float a);
 int		*ft_tab_int_max(int *tab, int length);
 int		*ft_tab_int_min(int *tab, int length);
 int		ft_cmp_bn(const char *n1, const char *n2);
