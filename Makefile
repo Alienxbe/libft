@@ -31,7 +31,8 @@ INCLUDES		:=	-I./includes \
 					-I./includes/private \
 
 # FILES
-SRCS_AREA		:=	area_to_size.c \
+SRCS_AREA		:=	area_collision.c \
+					area_to_size.c \
 					is_point_in_area.c \
 					point_to_area.c \
 					pos_to_area.c \
