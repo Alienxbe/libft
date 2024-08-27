@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:46:45 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/08 23:32:35 by mykman           ###   ########.fr       */
+/*   Updated: 2024/08/26 18:46:17 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_bool	ft_isnumber(char *str)
 {
-	if (!str)
+	if (!str || !*str)
 		return (false);
 	while (*str)
 		if (!ft_isdigit(*str++))
