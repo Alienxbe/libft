@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:11:34 by anonymou          #+#    #+#             */
-/*   Updated: 2023/12/22 15:08:01 by marykman         ###   ########.fr       */
+/*   Updated: 2024/09/03 18:46:24 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_ctoa(char c);
 char	*ft_zutoa_base(size_t n, const char *base);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strdup(const char *s);
+char	*ft_strndup(const char *s, size_t n);
 char	**ft_split(const char *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strtypelen(const char *s, t_bool (*istype)(int));
