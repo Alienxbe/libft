@@ -126,6 +126,7 @@ SRCS_STRING		:=	ft_addprefix.c \
 					ft_itoa.c \
 					ft_split.c \
 					ft_strchr.c \
+					ft_strcmp.c \
 					ft_strcount.c \
 					ft_strdiv.c \
 					ft_strdup.c \
