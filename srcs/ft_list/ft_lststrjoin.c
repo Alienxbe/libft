@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 17:24:28 by marykman          #+#    #+#             */
-/*   Updated: 2025/05/16 00:22:04 by marykman         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:45:24 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,3 @@ char	*ft_lststrjoin(t_list *lst, char *sep)
 		return (NULL);
 	return (copy_strs(lst, sep, str, size));
 }
-
