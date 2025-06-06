@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:01:41 by anonymou          #+#    #+#             */
-/*   Updated: 2025/05/16 01:17:09 by marykman         ###   ########.fr       */
+/*   Updated: 2025/06/03 14:35:07 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_lstsize(t_list *lst);
 t_bool	ft_lstadd_front(t_list **alst, t_list *new);
 t_bool	ft_lstadd_back(t_list **alst, t_list *new);
 t_bool	ft_lstiter(t_list *lst, void (*f)(void *));
+t_bool	ft_lstiterp(t_list *lst, void (*f)(void *, void *), void *param);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 
