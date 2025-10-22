@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_point.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 22:02:02 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/07 22:03:20 by mykman           ###   ########.fr       */
+/*   Updated: 2025/10/21 13:38:44 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,9 @@
 t_point	add_point(t_point p1, t_point p2)
 {
 	return ((t_point){p1.x + p2.x, p1.y + p2.y});
+}
+
+t_fpoint	add_fpoint(t_fpoint p1, t_fpoint p2)
+{
+	return ((t_fpoint){p1.x + p2.x, p1.y + p2.y});
 }
